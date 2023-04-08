@@ -6,6 +6,8 @@ using TMPro;
 
 public class Card : MonoBehaviour
 {
+    public int cardID;
+    [SerializeField] private CardManager cardManager;
     [SerializeField] private CardData cardData;
 
     [SerializeField] private TextMeshProUGUI cardText;
@@ -19,14 +21,20 @@ public class Card : MonoBehaviour
         SetSwipeObjectActiveness(false);
     }
 
+    public void OnSwipe()
+    {
+        cardManager.ZoomNextCard(transform.localPosition.x);
+    }
+
     public void Swipe()
     {
         Debug.Log("Swipe Edildi!!!");
     }
 
-    public void SetCard(CardData _cardData)
+    public void SetCard(CardManager _cardManager, CardData _cardData)
     {
         cardData = _cardData;
+        cardManager = _cardManager;
         cardText.text = cardData.cardText;
         answers[0].text = cardData.answers[0];
         answers[1].text = cardData.answers[1];

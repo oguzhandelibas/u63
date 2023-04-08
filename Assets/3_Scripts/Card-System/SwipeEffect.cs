@@ -14,6 +14,7 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
     
     public void OnDrag(PointerEventData eventData)
     {
+        card.OnSwipe();
         transform.localPosition = new Vector2(transform.localPosition.x+eventData.delta.x,transform.localPosition.y);
 
         if(transform.localPosition.x - _initialPosition.x > 0)
