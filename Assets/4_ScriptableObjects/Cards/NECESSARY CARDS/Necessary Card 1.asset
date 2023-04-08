@@ -10,17 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9214c7cf160617b4fa92ec20ccf37e46, type: 3}
-  m_Name: Card 6
+  m_Name: Necessary Card 1
   m_EditorClassIdentifier: 
   forLeft: 0
   isRequired: 0
-  cardText: NECESSARY 6
+  cardText: "Font dosyas\u0131, Unity i\xE7inde kullan\u0131lmak \xFCzere i\xE7e
+    aktar\u0131lacak ve bir Font asseti olarak listelenecektir."
   answers:
-  - HAYIR
-  - "BELK\u0130"
-  academicSuccess: 0
-  network: 0
-  experience: 0
-  selfImprovment: 0
-  characterImage: {fileID: 21300000, guid: 9a59d4a4e2e506c4fa0ef814dbafa6b2, type: 3}
+  - EVET
+  - EVET
+  academicSuccess: 5
+  network: 10
+  experience: 20
+  selfImprovment: 10
+  dayCost: 0
+  characterImage: {fileID: 21300000, guid: c10c9cc97db1b2240942d776967ca0bc, type: 3}
   backgroundColor: {r: 0.9725491, g: 0.7254902, b: 0.019607844, a: 1}

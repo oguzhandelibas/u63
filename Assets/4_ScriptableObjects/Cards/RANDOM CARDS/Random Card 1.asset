@@ -10,17 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9214c7cf160617b4fa92ec20ccf37e46, type: 3}
-  m_Name: Card 9
+  m_Name: Random Card 1
   m_EditorClassIdentifier: 
   forLeft: 0
-  isRequired: 0
-  cardText: RANDOM
+  isRequired: 1
+  cardText: "Unity Soru Cevap Bulu\u015Fmas\u0131"
   answers:
+  - "ASSETLER\u0130M\u0130 ALDIM GEL\u0130YORUM"
   - EVET
-  - EVET
-  academicSuccess: 0
-  network: 0
-  experience: 0
-  selfImprovment: 0
+  academicSuccess: 51
+  network: 52
+  experience: -42
+  selfImprovment: 39
+  dayCost: 5
   characterImage: {fileID: 21300000, guid: c10c9cc97db1b2240942d776967ca0bc, type: 3}
-  backgroundColor: {r: 0.9725491, g: 0.7254902, b: 0.019607844, a: 1}
+  backgroundColor: {r: 1, g: 0.8055556, b: 0.25, a: 1}
