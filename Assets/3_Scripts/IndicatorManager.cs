@@ -23,9 +23,36 @@ public class IndicatorManager : MonoBehaviour
         else if (selfImprovementImage.fillAmount == 0) UIManager.Instance.Lose(UIManager.LoseType.SelfImprovement);
     }
 
-    // Tüm sayýlarý kendi katsayýsý ile çarp, hepsini topla,
-    // toplam katsayý puanýna böl, 70 baþarý puanýndan yüksekse KAZANDIK, aksi takdirde KAYBETTÝK
+    public void FinalCalculation()
+    {
+        // Katsayýlarý tekrar yüzlük sisteme döndür
+        // Tüm sayýlarý kendi katsayýsý ile çarp, hepsini topla,
+        // toplam katsayý puanýna böl, 70 baþarý puanýndan yüksekse KAZANDIK, aksi takdirde KAYBETTÝK
+
+        float finalGrade;
+        float academic, network, experience, selfImprovement;
+        
+        academic = academicImage.fillAmount * 100;
+        network = networkImage.fillAmount * 100;
+        experience = experienceImage.fillAmount * 100;
+        selfImprovement = selfImprovementImage.fillAmount * 100;
+
+        finalGrade = (academic * 5) + (network * 2) + (experience * 2) + (selfImprovement * 3);
+        finalGrade = finalGrade / 12;
+
+        if(finalGrade>70)
+        {
+            // Win
+        }
+
+        else
+        {
+            // Lose
+        }
+    }
 
 
-    
+
+
+
 }
