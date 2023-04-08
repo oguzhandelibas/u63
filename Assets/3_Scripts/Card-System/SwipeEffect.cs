@@ -57,7 +57,7 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
                 _swipeLeft = true;
             }
             card.RemoveCard(gameObject);
-            card.Swipe(!_swipeLeft);
+            card.Swipe(_swipeLeft);
             StartCoroutine(MovedCard());
         }
         

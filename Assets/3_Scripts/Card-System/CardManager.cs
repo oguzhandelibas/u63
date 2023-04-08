@@ -10,6 +10,7 @@ public class CardManager : Singleton<CardManager>
     [SerializeField] private CardData[] randomCardDatas;
     [SerializeField] private CardData[] necessaryCardDatas;
 
+    [SerializeField] private Transform cardsParent;
     [SerializeField] private GameObject cardObject;
     public List<GameObject> cards = new List<GameObject>();
 
@@ -73,7 +74,7 @@ public class CardManager : Singleton<CardManager>
             
         CheckNecessaryCard();
 
-        Card card = Instantiate(cardObject, transform).GetComponent<Card>();
+        Card card = Instantiate(cardObject, cardsParent).GetComponent<Card>();
         card.transform.SetSiblingIndex(0);
         cards.Add(card.gameObject);
         

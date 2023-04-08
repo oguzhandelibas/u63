@@ -3,17 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class IndicatorManager : MonoBehaviour
+public class IndicatorManager : Singleton<IndicatorManager>
 {
     public Image academicImage, networkImage, experienceImage, selfImprovementImage;
     
     public int degisimDegeri;
 
-    public void Change(int academic,int network, int experience,int selfImprovement)
+    public void Change(float academic, float network, float experience, float selfImprovement)
     {
         // akademik baþarý-network-experience-selfImprovement
         academicImage.fillAmount += (academic/100);
-        networkImage.fillAmount+= (network/100);
+        networkImage.fillAmount += (network/100);
         experienceImage.fillAmount += (experience/100);
         selfImprovementImage.fillAmount += (selfImprovement/100);
 

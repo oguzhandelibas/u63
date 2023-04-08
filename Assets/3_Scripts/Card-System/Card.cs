@@ -39,33 +39,37 @@ public class Card : MonoBehaviour
     public void Swipe(bool left)
     {
         if (!GameManager.Instance.isGameContinue) return;
-            //cardManager.CurrentIndex -= 1;
-            /*if(cardData.isRequired)
+
+        if (cardData.isRequired)
+        {
+            if (cardData.forLeft == left)
             {
-                if (cardData.forLeft == left)
-                {
-                    //sorun yok
-                    Change(cardData.academicSuccess, cardData.network, cardData.experience, cardData.selfImprovment);
-                    Debug.Log("DEVAM");
-                }
-                else
-                {
-                    Debug.Log("ATILDIN!");
-                }
+                IndicatorManager.Instance.Change(cardData.academicSuccess, cardData.network, cardData.experience, cardData.selfImprovment);
+                Debug.Log("DEVAM");
             }
             else
             {
-                Change(cardData.academicSuccess, cardData.network, cardData.experience, cardData.selfImprovment);
-            }*/
+                Debug.Log("ATILDIN!");
+            }
+        }
+        else
+        {
+            if (cardData.forLeft)
+            {
+                if(left) IndicatorManager.Instance.Change(cardData.academicSuccess, cardData.network, cardData.experience, cardData.selfImprovment);
+                else IndicatorManager.Instance.Change(-cardData.academicSuccess, -cardData.network, -cardData.experience, -cardData.selfImprovment);
+            }
+            else
+            {
+                if (!left) IndicatorManager.Instance.Change(cardData.academicSuccess, cardData.network, cardData.experience, cardData.selfImprovment);
+                else IndicatorManager.Instance.Change(-cardData.academicSuccess, -cardData.network, -cardData.experience, -cardData.selfImprovment);
+            }
+        }
 
-            Change(cardData.academicSuccess, cardData.network, cardData.experience, cardData.selfImprovment);
-
-    }
-
-    public void Change(int a, int b, int c, int d)
-    {
         CreateNextCard();
+
     }
+
     public void SetCard(CardManager _cardManager, CardData _cardData)
     {
         cardData = _cardData;
