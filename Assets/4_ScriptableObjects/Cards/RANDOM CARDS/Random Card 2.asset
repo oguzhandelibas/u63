@@ -10,18 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9214c7cf160617b4fa92ec20ccf37e46, type: 3}
-  m_Name: Random Card 1
+  m_Name: Random Card 2
   m_EditorClassIdentifier: 
   forLeft: 1
   isRequired: 0
-  cardText: "Unity Soru Cevap Bulu\u015Fmas\u0131"
+  cardText: "Giri\u015Fimcilik Soru Cevap Bulu\u015Fmas\u0131 Yeni Nesil Kafas\u0131yla
+    ba\u015Fl\u0131yor :)"
   answers:
-  - "Assetlerimi aldim geli\u0307yorum"
-  - "Hay\u0131r, onun yerine slack'te neler olmu\u015F ona bakaca\u011F\u0131m"
-  academicSuccess: 20
-  network: -10
-  experience: 0
-  selfImprovment: 0
+  - "Evet akl\u0131mdakileri bir an \xF6nce sormak istiyorum"
+  - "Microsoft'u mu kuraca\u011F\u0131m sanki"
+  academicSuccess: 10
+  network: 20
+  experience: 10
+  selfImprovment: 10
   dayCost: 1
-  characterImage: {fileID: 21300000, guid: c6e0890bfb41a4541b3be4dfab15b05b, type: 3}
+  characterImage: {fileID: 21300000, guid: 831e656e6a0ff1c46be0b167f160a0cb, type: 3}
   backgroundColor: {r: 1, g: 0.8055556, b: 0.25, a: 1}
