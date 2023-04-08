@@ -16,12 +16,17 @@ public class Card : MonoBehaviour
 
     private void Start()
     {
-        SetCard();
         SetSwipeObjectActiveness(false);
     }
 
-    public void SetCard()
+    public void Swipe()
     {
+        Debug.Log("Swipe Edildi!!!");
+    }
+
+    public void SetCard(CardData _cardData)
+    {
+        cardData = _cardData;
         cardText.text = cardData.cardText;
         answers[0].text = cardData.answers[0];
         answers[1].text = cardData.answers[1];

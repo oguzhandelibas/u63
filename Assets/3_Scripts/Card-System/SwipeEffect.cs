@@ -15,6 +15,15 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
     public void OnDrag(PointerEventData eventData)
     {
         transform.localPosition = new Vector2(transform.localPosition.x+eventData.delta.x,transform.localPosition.y);
+
+        if(transform.localPosition.x - _initialPosition.x > 0)
+        {
+            transform.localEulerAngles = new Vector3(0, 0, Mathf.LerpAngle(0, -30, (_initialPosition.x + transform.localPosition.x) / (Screen.width / 2)));
+        }
+        else
+        {
+            transform.localEulerAngles = new Vector3(0, 0, Mathf.LerpAngle(0, 30, (_initialPosition.x - transform.localPosition.x) / (Screen.width / 2)));
+        }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -26,10 +35,13 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
     public void OnEndDrag(PointerEventData eventData)
     {
         card.SetSwipeObjectActiveness(false);
+        card.Swipe();
+
         _distanceMoved = Mathf.Abs(transform.localPosition.x - (_initialPosition.x));
         if(_distanceMoved< swipeDistance * Screen.width)
         {
             transform.localPosition = _initialPosition;
+            transform.localEulerAngles = Vector3.zero;
         }
         else
         {
@@ -44,6 +56,7 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
             }
             StartCoroutine(MovedCard());
         }
+        
     }
 
     private IEnumerator MovedCard()
