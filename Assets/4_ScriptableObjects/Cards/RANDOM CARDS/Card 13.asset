@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9214c7cf160617b4fa92ec20ccf37e46, type: 3}
-  m_Name: Card 6
+  m_Name: Card 13
   m_EditorClassIdentifier: 
   forLeft: 0
-  cardText: "NETWORK E\u011E\u0130T\u0130M\u0130NE KATILACAK MISIN?"
+  isRequired: 0
+  cardText: RANDOM
   answers:
   - HAYIR
   - "BELK\u0130"

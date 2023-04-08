@@ -199,7 +199,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 117448096}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -516,7 +516,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 073d2b7f71ed0864c8a27b86377e073d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cardDatas:
+  tuple:
+  - {x: 0, y: 4}
+  - {x: 8, y: 0}
+  - {x: 11, y: 12}
+  randomCardDatas:
+  - {fileID: 11400000, guid: 4612c9ba24bdf9d4c98d9419e5e24a60, type: 2}
+  - {fileID: 11400000, guid: 969e7b73bec2d9444b0c136cbeca4f01, type: 2}
+  - {fileID: 11400000, guid: 1660f11d45998b94fa5f34f9ecdfabde, type: 2}
+  - {fileID: 11400000, guid: 6a11a93f506fb254dab0edbeecc1634a, type: 2}
+  - {fileID: 11400000, guid: b8571dc13d27f8c45bc1e1c778ed3e16, type: 2}
+  - {fileID: 11400000, guid: bd7dab31b4548bb43a35b0be32ae56ea, type: 2}
+  - {fileID: 11400000, guid: 83251c1cfe5c83a468c7beeded0b67fe, type: 2}
+  necessaryCardDatas:
   - {fileID: 11400000, guid: 4710dbab0234a3745a98ab35256d52ff, type: 2}
   - {fileID: 11400000, guid: e950e0feb6d39534a89ca4b62facc243, type: 2}
   - {fileID: 11400000, guid: d730629430cd4584db97a7e24144a66d, type: 2}
@@ -525,11 +537,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 14fd7df9d5b5f65428df44077967b544, type: 2}
   - {fileID: 11400000, guid: fa883828bcbd86641aaa1c0cfdc6245d, type: 2}
   - {fileID: 11400000, guid: fa0713538fd7ae44ba8b22bcb9fec9b2, type: 2}
-  - {fileID: 11400000, guid: 4612c9ba24bdf9d4c98d9419e5e24a60, type: 2}
-  - {fileID: 11400000, guid: 969e7b73bec2d9444b0c136cbeca4f01, type: 2}
-  - {fileID: 11400000, guid: 1660f11d45998b94fa5f34f9ecdfabde, type: 2}
-  - {fileID: 11400000, guid: 6a11a93f506fb254dab0edbeecc1634a, type: 2}
-  - {fileID: 11400000, guid: b8571dc13d27f8c45bc1e1c778ed3e16, type: 2}
-  - {fileID: 11400000, guid: bd7dab31b4548bb43a35b0be32ae56ea, type: 2}
-  - {fileID: 11400000, guid: 83251c1cfe5c83a468c7beeded0b67fe, type: 2}
+  - {fileID: 11400000, guid: 7d89a812511bcad4e9906f40b03705c5, type: 2}
+  - {fileID: 11400000, guid: e8f6d1815f9311c4296547246db43df7, type: 2}
+  - {fileID: 11400000, guid: 9d109c120873b2e41857736b179ddeb1, type: 2}
+  - {fileID: 11400000, guid: fc3a251986cf8134f9e689ad271bf612, type: 2}
   cardObject: {fileID: 4223261586897927987, guid: 7ab60fc5f816e7c41888985c2deeb4ad, type: 3}
+  cards: []
+  necessaryCardTime: 1
+  tupleIndex: 0
+  currentIndex: 0
+  necessaryIndex: 0

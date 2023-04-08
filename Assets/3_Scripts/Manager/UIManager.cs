@@ -6,7 +6,6 @@ public class UIManager : Singleton<UIManager>
 {
     public enum LoseType
     {
-        
         Academic,
         Network,
         Experience,
@@ -40,12 +39,11 @@ public class UIManager : Singleton<UIManager>
                 loseCardData = loseCardDatas[4];
                 break;
         }
-
         CardManager.Instance.CreateCard(loseCardData);
     }
 
     public void Win()
     {
-
+        Debug.Log("Oyun Bitti");
     }
 }

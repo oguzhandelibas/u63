@@ -21,6 +21,16 @@ public class Card : MonoBehaviour
         SetSwipeObjectActiveness(false,false);
     }
 
+    public void RemoveCard(GameObject cardObj)
+    {
+        cardManager.RemoveCard(cardObj);
+    }
+
+    public void CreateNextCard()
+    {
+        cardManager.CreateCard();
+    }
+
     public void OnSwipe()
     {
         cardManager.ZoomNextCard(transform.localPosition.x);
@@ -28,30 +38,33 @@ public class Card : MonoBehaviour
 
     public void Swipe(bool left)
     {
-        cardManager.CurrentIndex -= 1;
-        if(cardData.isRequired)
-        {
-            if (cardData.forLeft == left)
+        if (!GameManager.Instance.isGameContinue) return;
+            //cardManager.CurrentIndex -= 1;
+            /*if(cardData.isRequired)
             {
-                //sorun yok
-                Change(cardData.academicSuccess, cardData.network, cardData.experience, cardData.selfImprovment);
-                Debug.Log("DEVAM");
+                if (cardData.forLeft == left)
+                {
+                    //sorun yok
+                    Change(cardData.academicSuccess, cardData.network, cardData.experience, cardData.selfImprovment);
+                    Debug.Log("DEVAM");
+                }
+                else
+                {
+                    Debug.Log("ATILDIN!");
+                }
             }
             else
             {
-                Debug.Log("ATILDIN!");
-            }
-        }
-        else
-        {
+                Change(cardData.academicSuccess, cardData.network, cardData.experience, cardData.selfImprovment);
+            }*/
+
             Change(cardData.academicSuccess, cardData.network, cardData.experience, cardData.selfImprovment);
-        }
-        
+
     }
 
     public void Change(int a, int b, int c, int d)
     {
-
+        CreateNextCard();
     }
     public void SetCard(CardManager _cardManager, CardData _cardData)
     {

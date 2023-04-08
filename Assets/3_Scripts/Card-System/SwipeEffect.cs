@@ -11,10 +11,14 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
     private Vector3 _initialPosition;
     private float _distanceMoved;
     private bool _swipeLeft;
-    
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
+        _initialPosition = transform.localPosition;
+    }
+
     public void OnDrag(PointerEventData eventData)
     {
-        if (!GameManager.Instance.isGameContinue) return;
         card.OnSwipe();
         transform.localPosition = new Vector2(transform.localPosition.x+eventData.delta.x,transform.localPosition.y);
 
@@ -30,15 +34,8 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
         }
     }
 
-    public void OnBeginDrag(PointerEventData eventData)
-    {
-        if (!GameManager.Instance.isGameContinue) return;
-        _initialPosition = transform.localPosition;
-    }
-
     public void OnEndDrag(PointerEventData eventData)
     {
-        if (!GameManager.Instance.isGameContinue) return;
         card.SetSwipeObjectActiveness(false,false);
         
 
@@ -59,6 +56,7 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
             {
                 _swipeLeft = true;
             }
+            card.RemoveCard(gameObject);
             card.Swipe(!_swipeLeft);
             StartCoroutine(MovedCard());
         }

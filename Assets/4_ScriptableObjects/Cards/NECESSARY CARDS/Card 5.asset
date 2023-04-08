@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9214c7cf160617b4fa92ec20ccf37e46, type: 3}
-  m_Name: Card 14
+  m_Name: Card 5
   m_EditorClassIdentifier: 
   forLeft: 0
-  cardText: "Yap\u0131mc\u0131 bu videoyu izleyince y\xFCz\xFCndeki gurur dolu ifadeyi
-    g\xF6rmek isterdim."
+  isRequired: 0
+  cardText: NECESSARY 5
   answers:
-  - EHEHE
-  - OLUR
+  - EVET
+  - EVET
   academicSuccess: 0
   network: 0
   experience: 0
