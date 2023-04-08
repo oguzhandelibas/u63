@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CardManager : MonoBehaviour
 {
@@ -8,7 +9,7 @@ public class CardManager : MonoBehaviour
     [SerializeField] private GameObject cardObject;
     List<GameObject> cards = new List<GameObject>();
     private int currentIndex;
-    public int CurrentIndex { get { return currentIndex; } set { currentIndex -= value; } }
+    public int CurrentIndex { get { return currentIndex; } set { currentIndex = value; } }
 
     private void Awake()
     {
@@ -26,7 +27,7 @@ public class CardManager : MonoBehaviour
 
     public void ZoomNextCard(float distanceMoved)
     {
-        if(currentIndex >= 0 && Mathf.Abs(distanceMoved) > 0)
+        if(currentIndex > 0 && Mathf.Abs(distanceMoved) > 0)
         {
             float step = Mathf.SmoothStep(0.8f, 1, Mathf.Abs(distanceMoved) / (Screen.width / 2));
             cards[currentIndex-1].transform.localScale = new Vector3(step, step, step);

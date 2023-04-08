@@ -391,4 +391,8 @@ MonoBehaviour:
   cardDatas:
   - {fileID: 11400000, guid: 4710dbab0234a3745a98ab35256d52ff, type: 2}
   - {fileID: 11400000, guid: e950e0feb6d39534a89ca4b62facc243, type: 2}
+  - {fileID: 11400000, guid: d730629430cd4584db97a7e24144a66d, type: 2}
+  - {fileID: 11400000, guid: 243ccaca94ea7d54ebd2d658804e269a, type: 2}
   cardObject: {fileID: 4223261586897927987, guid: 7ab60fc5f816e7c41888985c2deeb4ad, type: 3}
+  indicators:
+  - {fileID: 0}

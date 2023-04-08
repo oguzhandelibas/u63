@@ -28,6 +28,7 @@ public class Card : MonoBehaviour
 
     public void Swipe()
     {
+        cardManager.CurrentIndex -= 1;
         Debug.Log("Swipe Edildi!!!");
     }
 
