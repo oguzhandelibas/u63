@@ -26,12 +26,33 @@ public class Card : MonoBehaviour
         cardManager.ZoomNextCard(transform.localPosition.x);
     }
 
-    public void Swipe()
+    public void Swipe(bool left)
     {
         cardManager.CurrentIndex -= 1;
-        Debug.Log("Swipe Edildi!!!");
+        if(cardData.isRequired)
+        {
+            if (cardData.forLeft == left)
+            {
+                //sorun yok
+                Change(cardData.academicSuccess, cardData.network, cardData.experience, cardData.selfImprovment);
+                Debug.Log("DEVAM");
+            }
+            else
+            {
+                Debug.Log("ATILDIN!");
+            }
+        }
+        else
+        {
+            Change(cardData.academicSuccess, cardData.network, cardData.experience, cardData.selfImprovment);
+        }
+        
     }
 
+    public void Change(int a, int b, int c, int d)
+    {
+
+    }
     public void SetCard(CardManager _cardManager, CardData _cardData)
     {
         cardData = _cardData;

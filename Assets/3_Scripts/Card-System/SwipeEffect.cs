@@ -59,7 +59,7 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
             {
                 _swipeLeft = true;
             }
-            card.Swipe();
+            card.Swipe(!_swipeLeft);
             StartCoroutine(MovedCard());
         }
         
