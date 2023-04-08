@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDragHandler
 {
+    public Transform cardTransform;
     [SerializeField] private Card card;
     [SerializeField] private float swipeDistance = 0.25f;
     private Vector3 _initialPosition;
@@ -14,22 +15,22 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        _initialPosition = transform.localPosition;
+        _initialPosition = cardTransform.localPosition;
     }
 
     public void OnDrag(PointerEventData eventData)
     {
         card.OnSwipe();
-        transform.localPosition = new Vector2(transform.localPosition.x+eventData.delta.x,transform.localPosition.y);
+        cardTransform.localPosition = new Vector2(cardTransform.localPosition.x+eventData.delta.x, cardTransform.localPosition.y);
 
-        if(transform.localPosition.x - _initialPosition.x > 0)
+        if(cardTransform.localPosition.x - _initialPosition.x > 0)
         {
-            transform.localEulerAngles = new Vector3(0, 0, Mathf.LerpAngle(0, -30, (_initialPosition.x + transform.localPosition.x) / (Screen.width / 2)));
+            cardTransform.localEulerAngles = new Vector3(0, 0, Mathf.LerpAngle(0, -30, (_initialPosition.x + cardTransform.localPosition.x) / (Screen.width / 2)));
             card.SetSwipeObjectActiveness(false, true);
         }
         else
         {
-            transform.localEulerAngles = new Vector3(0, 0, Mathf.LerpAngle(0, 30, (_initialPosition.x - transform.localPosition.x) / (Screen.width / 2)));
+            cardTransform.localEulerAngles = new Vector3(0, 0, Mathf.LerpAngle(0, 30, (_initialPosition.x - cardTransform.localPosition.x) / (Screen.width / 2)));
             card.SetSwipeObjectActiveness(true, false);
         }
     }
@@ -39,15 +40,15 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
         card.SetSwipeObjectActiveness(false,false);
         
 
-        _distanceMoved = Mathf.Abs(transform.localPosition.x - (_initialPosition.x));
+        _distanceMoved = Mathf.Abs(cardTransform.localPosition.x - (_initialPosition.x));
         if(_distanceMoved< swipeDistance * Screen.width)
         {
-            transform.localPosition = _initialPosition;
-            transform.localEulerAngles = Vector3.zero;
+            cardTransform.localPosition = _initialPosition;
+            cardTransform.localEulerAngles = Vector3.zero;
         }
         else
         {
-            if (transform.localPosition.x > _initialPosition.x)
+            if (cardTransform.localPosition.x > _initialPosition.x)
             {
                 _swipeLeft = false;
                 
@@ -56,9 +57,9 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
             {
                 _swipeLeft = true;
             }
-            card.RemoveCard(gameObject);
-            card.Swipe(_swipeLeft);
             StartCoroutine(MovedCard());
+            
+            
         }
         
     }
@@ -66,22 +67,27 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
     private IEnumerator MovedCard()
     {
         float time = 0;
+        card.cardManager.cards[1].GetComponent<Card>().cardText.gameObject.SetActive(true);
+        card.cardText.gameObject.SetActive(false);
         while (GetComponent<Image>().color != new Color(1, 1, 1, 0))
         {
             time += Time.deltaTime;
             if (_swipeLeft)
             {
-                transform.localPosition = new Vector3(Mathf.SmoothStep(transform.localPosition.x,
-                    transform.localPosition.x-Screen.width,time),transform.localPosition.y,0);
+                cardTransform.localPosition = new Vector3(Mathf.SmoothStep(cardTransform.localPosition.x,
+                    cardTransform.localPosition.x-Screen.width,time), cardTransform.localPosition.y,0);
             }
             else
             {
-                transform.localPosition = new Vector3(Mathf.SmoothStep(transform.localPosition.x,
-                    transform.localPosition.x+Screen.width,time),transform.localPosition.y,0);
+                cardTransform.localPosition = new Vector3(Mathf.SmoothStep(cardTransform.localPosition.x,
+                    cardTransform.localPosition.x+Screen.width,time), cardTransform.localPosition.y,0);
             }
             GetComponent<Image>().color = new Color(1,1,1,Mathf.SmoothStep(1,0,4*time));
+            
             yield return null;
         }
+        card.RemoveCard();
+        card.Swipe(_swipeLeft);
         Destroy(gameObject);
     }
 }

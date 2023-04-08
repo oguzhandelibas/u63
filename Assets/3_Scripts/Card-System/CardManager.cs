@@ -88,8 +88,9 @@ public class CardManager : Singleton<CardManager>
         
         card.gameObject.name = "Necessary Card " + (necessaryIndex);
         if (cardData == null) cardData = necessaryCardDatas[necessaryIndex];
-        card.SetCard(this, cardData);
         card.cardID = currentIndex + 1;
+        card.SetCard(this, cardData);
+        
         if (card.gameObject != cards[0]) card.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
         necessaryIndex++;
 
@@ -101,14 +102,17 @@ public class CardManager : Singleton<CardManager>
     {
         card.gameObject.name = "Random Card";
         if (cardData == null) cardData = randomCardDatas[Random.Range(0,randomCardDatas.Length)];
-        card.SetCard(this, cardData);
         card.cardID = currentIndex + 1;
+        card.SetCard(this, cardData);
         if (card.gameObject != cards[0]) card.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
     }
 
     public void ZoomNextCard(float distanceMoved)
     {
-        if(cards.Count > 1 && currentIndex <= tuple[tuple.Length-1].y && Mathf.Abs(distanceMoved) > 0)
+        Debug.Log(cards.Count > 1);
+        Debug.Log(currentIndex <= tuple[tuple.Length - 1].y);
+        Debug.Log(Mathf.Abs(distanceMoved));
+        if (cards.Count > 1 && currentIndex <= tuple[tuple.Length-1].y && Mathf.Abs(distanceMoved) > 0)
         {
             float step = Mathf.SmoothStep(0.8f, 1, Mathf.Abs(distanceMoved) / (Screen.width / 2));
             cards[1].transform.localScale = new Vector3(step, step, step);

@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 1
   isRequired: 0
-  cardText: "Akademi\u0307 Oryantasyon program\u0131na kat\u0131lmaya ne dersi\u0307n
-    :)"
+  cardText: "Akademi Oryantasyon program\u0131na kat\u0131lmaya ne dersi\u0307n :)"
   answers:
-  - "U\xE7arak geli\u0307yorum \U0001F680"
-  - "Tam kat\u0131lacakken aya\u011F\u0131m kayd\u0131...."
+  - "U\xE7arak geli\u0307yorum"
+  - "Tam kat\u0131lacakken aya\u011F\u0131m kayd\u0131.."
   academicSuccess: 20
   network: 0
   experience: 0

@@ -16,8 +16,7 @@ MonoBehaviour:
   isRequired: 0
   cardText: "Ideathon ba\u015Fl\u0131yor!! Haz\u0131r m\u0131s\u0131nn??"
   answers:
-  - "Fi\u0307ki\u0307r \xFCretmek bi\u0307zi\u0307m i\u0307\u015Fi\u0307mi\u0307z
-    \U0001F60F\U0001F60E"
+  - "Fikir \xFCretmek bizim i\u015Fimiz"
   - Ideathon nedir?
   academicSuccess: 5
   network: 25

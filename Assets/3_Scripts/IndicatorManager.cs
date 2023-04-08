@@ -6,8 +6,11 @@ using UnityEngine.UI;
 public class IndicatorManager : Singleton<IndicatorManager>
 {
     public Image academicImage, networkImage, experienceImage, selfImprovementImage;
-    
-    public int degisimDegeri;
+
+    private void Start()
+    {
+        Change(10, 10, 10, 10);
+    }
 
     public void Change(float academic, float network, float experience, float selfImprovement)
     {

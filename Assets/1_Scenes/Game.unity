@@ -390,7 +390,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 300}
+  m_SizeDelta: {x: 0, y: 139.8725}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &369925647
 MonoBehaviour:
@@ -478,7 +478,6 @@ MonoBehaviour:
   networkImage: {fileID: 367357507}
   experienceImage: {fileID: 1515364870}
   selfImprovementImage: {fileID: 1729163302}
-  degisimDegeri: 0
 --- !u!1 &803033797
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,17 +1299,17 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Akademide son 77 Gun!
+  m_text: "Akademide son 77 G\xFCn!"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 537d931caba49cc4f910c48aa5229489, type: 2}
-  m_sharedMaterial: {fileID: 5834824074162855832, guid: 537d931caba49cc4f910c48aa5229489, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1572,29 +1571,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tuple:
   - {x: 0, y: 4}
-  - {x: 8, y: 0}
-  - {x: 11, y: 12}
+  - {x: 6, y: 9}
+  - {x: 12, y: 15}
+  - {x: 20, y: 21}
+  - {x: 24, y: 28}
   randomCardDatas:
   - {fileID: 11400000, guid: 4612c9ba24bdf9d4c98d9419e5e24a60, type: 2}
-  - {fileID: 11400000, guid: 969e7b73bec2d9444b0c136cbeca4f01, type: 2}
-  - {fileID: 11400000, guid: 1660f11d45998b94fa5f34f9ecdfabde, type: 2}
-  - {fileID: 11400000, guid: 6a11a93f506fb254dab0edbeecc1634a, type: 2}
-  - {fileID: 11400000, guid: b8571dc13d27f8c45bc1e1c778ed3e16, type: 2}
-  - {fileID: 11400000, guid: bd7dab31b4548bb43a35b0be32ae56ea, type: 2}
-  - {fileID: 11400000, guid: 83251c1cfe5c83a468c7beeded0b67fe, type: 2}
+  - {fileID: 11400000, guid: ac10ab3877aa86e4082bd947a76561ce, type: 2}
+  - {fileID: 11400000, guid: 0c17e3dce1fe33a448ac3631809e4779, type: 2}
+  - {fileID: 11400000, guid: 4672a8adc1bc7364fac4a110feeb1f0f, type: 2}
+  - {fileID: 11400000, guid: 7c42fa94eb2c0c74c88826ebb8887be1, type: 2}
+  - {fileID: 11400000, guid: b83c27cd16e82244eac673e4848d78be, type: 2}
+  - {fileID: 11400000, guid: 189bb5e8ed6b508498a73a476ba40f0c, type: 2}
+  - {fileID: 11400000, guid: bdb44eb51b7148e4d8c8714943800f0f, type: 2}
+  - {fileID: 11400000, guid: 346c26462b324ce4192058dab656b677, type: 2}
   necessaryCardDatas:
   - {fileID: 11400000, guid: 4710dbab0234a3745a98ab35256d52ff, type: 2}
-  - {fileID: 11400000, guid: e950e0feb6d39534a89ca4b62facc243, type: 2}
-  - {fileID: 11400000, guid: d730629430cd4584db97a7e24144a66d, type: 2}
-  - {fileID: 11400000, guid: 243ccaca94ea7d54ebd2d658804e269a, type: 2}
-  - {fileID: 11400000, guid: 230a54008a13063488fbf026917bbefa, type: 2}
-  - {fileID: 11400000, guid: 14fd7df9d5b5f65428df44077967b544, type: 2}
-  - {fileID: 11400000, guid: fa883828bcbd86641aaa1c0cfdc6245d, type: 2}
-  - {fileID: 11400000, guid: fa0713538fd7ae44ba8b22bcb9fec9b2, type: 2}
-  - {fileID: 11400000, guid: 7d89a812511bcad4e9906f40b03705c5, type: 2}
-  - {fileID: 11400000, guid: e8f6d1815f9311c4296547246db43df7, type: 2}
-  - {fileID: 11400000, guid: 9d109c120873b2e41857736b179ddeb1, type: 2}
-  - {fileID: 11400000, guid: fc3a251986cf8134f9e689ad271bf612, type: 2}
+  - {fileID: 11400000, guid: 63db90128e2e1514cbc0c161d6cdf701, type: 2}
+  - {fileID: 11400000, guid: 88773676f549a27488b1135fe7cf04dd, type: 2}
+  - {fileID: 11400000, guid: dbdc13564043b3345876bc18a600c5b1, type: 2}
+  - {fileID: 11400000, guid: 594454ccb78b8cb4f85d048cc07aa1cc, type: 2}
+  - {fileID: 11400000, guid: 9072e1c8093c9384b8a2214e07429783, type: 2}
+  - {fileID: 11400000, guid: 83329ef663dab9844a97c17227e397c1, type: 2}
+  - {fileID: 11400000, guid: b66b1445a7e9c5046a0c63f64d1b86fd, type: 2}
+  - {fileID: 11400000, guid: a489cb085ddead24692d023178811d79, type: 2}
+  - {fileID: 11400000, guid: 7d7840b32ac39a243b5b88fcd79d95e3, type: 2}
+  - {fileID: 11400000, guid: 16b1622f724044f429356761bbe4b6eb, type: 2}
+  - {fileID: 11400000, guid: 7b176b62838f0234c8f278fe5aca0dfa, type: 2}
+  - {fileID: 11400000, guid: 029b9128b26107a46a433366bd1ba7c1, type: 2}
+  - {fileID: 11400000, guid: 1e0440227b4ef9b48b7bd9bf1c98e8ba, type: 2}
+  - {fileID: 11400000, guid: 02845306c9a4b524cb8e9de673e4f335, type: 2}
+  - {fileID: 11400000, guid: 1aba850fd0cb28d47aa6a56d70b60c8f, type: 2}
   cardsParent: {fileID: 2049031843}
   cardObject: {fileID: 4223261586897927987, guid: 7ab60fc5f816e7c41888985c2deeb4ad, type: 3}
   cards: []

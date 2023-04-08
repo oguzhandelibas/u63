@@ -6,11 +6,12 @@ using TMPro;
 
 public class Card : MonoBehaviour
 {
+    [HideInInspector] public Card nextCard;
     public int cardID;
-    [SerializeField] private CardManager cardManager;
+    public CardManager cardManager;
     [SerializeField] private CardData cardData;
 
-    [SerializeField] private TextMeshProUGUI cardText;
+    public TextMeshProUGUI cardText;
     [SerializeField] private TextMeshProUGUI[] answers;
 
     [SerializeField] private Image background;
@@ -21,19 +22,22 @@ public class Card : MonoBehaviour
         SetSwipeObjectActiveness(false,false);
     }
 
-    public void RemoveCard(GameObject cardObj)
+    public void RemoveCard()
     {
-        cardManager.RemoveCard(cardObj);
+        
+        cardManager.RemoveCard(gameObject);
     }
 
     public void CreateNextCard()
     {
-        cardManager.CreateCard();
+        nextCard = cardManager.CreateCard();
+        
     }
+
 
     public void OnSwipe()
     {
-        cardManager.ZoomNextCard(transform.localPosition.x);
+        cardManager.ZoomNextCard(transform.GetChild(0).localPosition.x);
     }
 
     public void Swipe(bool left)
@@ -72,6 +76,7 @@ public class Card : MonoBehaviour
 
     public void SetCard(CardManager _cardManager, CardData _cardData)
     {
+        
         cardData = _cardData;
         cardManager = _cardManager;
         cardText.text = cardData.cardText;
@@ -80,6 +85,8 @@ public class Card : MonoBehaviour
 
         background.color = cardData.backgroundColor;
         characterImage.sprite = cardData.characterImage;
+
+        if (cardID == 1) cardText.gameObject.SetActive(true);
     }
 
     public void SetSwipeObjectActiveness(bool value1, bool value2)
