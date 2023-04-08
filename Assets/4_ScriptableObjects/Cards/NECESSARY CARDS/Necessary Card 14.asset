@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9214c7cf160617b4fa92ec20ccf37e46, type: 3}
-  m_Name: Necessary Card 1
+  m_Name: Necessary Card 14
   m_EditorClassIdentifier: 
   forLeft: 1
   isRequired: 0
-  cardText: "Akademi\u0307 Oryantasyon program\u0131na kat\u0131lmaya ne dersi\u0307n
-    :)"
+  cardText: Proje ne alemde?
   answers:
-  - "U\xE7arak geli\u0307yorum \U0001F680"
-  - "Tam kat\u0131lacakken aya\u011F\u0131m kayd\u0131...."
-  academicSuccess: 20
-  network: 0
-  experience: 0
-  selfImprovment: 10
-  dayCost: 1
-  characterImage: {fileID: 21300000, guid: f39eadbe816d1d64e8fac54f08cea659, type: 3}
+  - "2 ki\u015Fi ayr\u0131ld\u0131 ama durmak yok!"
+  - "2 ki\u015Fi ayr\u0131ld\u0131 yatar bu i\u015F :("
+  academicSuccess: 10
+  network: 5
+  experience: 5
+  selfImprovment: 5
+  dayCost: 10
+  characterImage: {fileID: 21300000, guid: c10c9cc97db1b2240942d776967ca0bc, type: 3}
   backgroundColor: {r: 0.9725491, g: 0.7254902, b: 0.019607844, a: 1}

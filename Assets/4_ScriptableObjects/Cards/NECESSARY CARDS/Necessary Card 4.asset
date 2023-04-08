@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9214c7cf160617b4fa92ec20ccf37e46, type: 3}
-  m_Name: Necessary Card 1
+  m_Name: Necessary Card 4
   m_EditorClassIdentifier: 
-  forLeft: 1
-  isRequired: 0
-  cardText: "Akademi\u0307 Oryantasyon program\u0131na kat\u0131lmaya ne dersi\u0307n
-    :)"
+  forLeft: 0
+  isRequired: 1
+  cardText: "Ayl\u0131k tamamlaman gereken g\xF6revlerin son tarihi yakla\u015F\u0131yor!!"
   answers:
-  - "U\xE7arak geli\u0307yorum \U0001F680"
-  - "Tam kat\u0131lacakken aya\u011F\u0131m kayd\u0131...."
-  academicSuccess: 20
+  - "Aman aman nereye geldi\u0307k daha demi\u0307n oryantasyondayd\u0131k"
+  - "Bu zamana g\xF6rev mi kal\u0131r?"
+  academicSuccess: 0
   network: 0
-  experience: 0
-  selfImprovment: 10
-  dayCost: 1
-  characterImage: {fileID: 21300000, guid: f39eadbe816d1d64e8fac54f08cea659, type: 3}
+  experience: 10
+  selfImprovment: 0
+  dayCost: 20
+  characterImage: {fileID: 21300000, guid: 9fd7e9f054f642b4896d4f4f0a86ac8e, type: 3}
   backgroundColor: {r: 0.9725491, g: 0.7254902, b: 0.019607844, a: 1}

@@ -10,19 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9214c7cf160617b4fa92ec20ccf37e46, type: 3}
-  m_Name: Necessary Card 1
+  m_Name: Necessary Card 10
   m_EditorClassIdentifier: 
-  forLeft: 1
+  forLeft: 0
   isRequired: 0
-  cardText: "Akademi\u0307 Oryantasyon program\u0131na kat\u0131lmaya ne dersi\u0307n
-    :)"
+  cardText: "Game Jam nas\u0131l ge\xE7ti?"
   answers:
-  - "U\xE7arak geli\u0307yorum \U0001F680"
-  - "Tam kat\u0131lacakken aya\u011F\u0131m kayd\u0131...."
-  academicSuccess: 20
+  - "Hediye \xE7ekini kapt\u0131k!!"
+  - "Tecr\xFCbe kazand\u0131k.."
+  academicSuccess: 0
   network: 0
   experience: 0
-  selfImprovment: 10
+  selfImprovment: 0
   dayCost: 1
-  characterImage: {fileID: 21300000, guid: f39eadbe816d1d64e8fac54f08cea659, type: 3}
+  characterImage: {fileID: 21300000, guid: bc02d8a8a3a6dcb4c8d3c80292689431, type: 3}
   backgroundColor: {r: 0.9725491, g: 0.7254902, b: 0.019607844, a: 1}
