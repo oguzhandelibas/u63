@@ -17,6 +17,7 @@ public class Card : MonoBehaviour
     private void Start()
     {
         SetCard();
+        SetSwipeObjectActiveness(false);
     }
 
     public void SetCard()
@@ -27,5 +28,13 @@ public class Card : MonoBehaviour
 
         background.color = cardData.backgroundColor;
         characterImage.sprite = cardData.characterImage;
+    }
+
+    public void SetSwipeObjectActiveness(bool value)
+    {
+        foreach (var item in answers)
+        {
+            item.gameObject.SetActive(value);
+        }
     }
 }

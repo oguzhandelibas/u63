@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDragHandler
 {
+    [SerializeField] private Card card;
+    [SerializeField] private float swipeDistance = 0.25f;
     private Vector3 _initialPosition;
     private float _distanceMoved;
     private bool _swipeLeft;
@@ -18,12 +20,14 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
     public void OnBeginDrag(PointerEventData eventData)
     {
         _initialPosition = transform.localPosition;
+        card.SetSwipeObjectActiveness(true);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        _distanceMoved = Mathf.Abs(transform.localPosition.x - _initialPosition.x);
-        if(_distanceMoved<0.4*Screen.width)
+        card.SetSwipeObjectActiveness(false);
+        _distanceMoved = Mathf.Abs(transform.localPosition.x - (_initialPosition.x));
+        if(_distanceMoved< swipeDistance * Screen.width)
         {
             transform.localPosition = _initialPosition;
         }
