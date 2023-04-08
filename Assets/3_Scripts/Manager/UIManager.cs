@@ -6,35 +6,42 @@ public class UIManager : Singleton<UIManager>
 {
     public enum LoseType
     {
+        
         Academic,
         Network,
         Experience,
-        SelfImprovement
+        SelfImprovement,
+        Requirement
     }
     public LoseType loseType;
 
-    [SerializeField] private GameObject[] academicLoseCards;
+    [SerializeField] private CardData[] loseCardDatas;
 
     public void Lose(LoseType _loseType)
     {
         GameManager.Instance.isGameContinue = false;
-        foreach (GameObject item in academicLoseCards) item.SetActive(false);
+        CardData loseCardData = loseCardData = loseCardDatas[0];
 
         switch (_loseType)
         {
             case LoseType.Academic:
-                academicLoseCards[0].SetActive(true);
+                loseCardData = loseCardDatas[0];
                 break;
             case LoseType.Network:
-                academicLoseCards[1].SetActive(true);
+                loseCardData = loseCardDatas[1];
                 break;
             case LoseType.Experience:
-                academicLoseCards[2].SetActive(true);
+                loseCardData = loseCardDatas[2];
                 break;
             case LoseType.SelfImprovement:
-                academicLoseCards[3].SetActive(true);
+                loseCardData = loseCardDatas[3];
+                break;
+            case LoseType.Requirement:
+                loseCardData = loseCardDatas[4];
                 break;
         }
+
+        CardManager.Instance.CreateCard(loseCardData);
     }
 
     public void Win()

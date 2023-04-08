@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class CardManager : MonoBehaviour
+public class CardManager : Singleton<CardManager>
 {
     [SerializeField] private CardData[] cardDatas;
     [SerializeField] private GameObject cardObject;
@@ -16,13 +16,19 @@ public class CardManager : MonoBehaviour
         currentIndex = cardDatas.Length-1;
         for (int i = currentIndex; i >= 0; i--)
         {
-            Card card = Instantiate(cardObject, transform).GetComponent<Card>();
-            cards.Add(card.gameObject);
-            card.gameObject.name = "Card " + (i+1);
-            card.SetCard(this, cardDatas[i]);
-            card.cardID = i+1;
-            if (i != 0) card.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            CreateCard(cardDatas[i], i);
         }
+    }
+
+    public Card CreateCard(CardData cardData, int i = 0)
+    {
+        Card card = Instantiate(cardObject, transform).GetComponent<Card>();
+        cards.Add(card.gameObject);
+        card.gameObject.name = "Card " + (i + 1);
+        card.SetCard(this, cardData);
+        card.cardID = i + 1;
+        if (i != 0) card.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+        return card;
     }
 
     public void ZoomNextCard(float distanceMoved)
