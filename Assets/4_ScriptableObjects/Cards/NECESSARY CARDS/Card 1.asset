@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 0
   isRequired: 0
-  cardText: NECESSARY 1
+  cardText: "Font dosyas\u0131, Unity i\xE7inde kullan\u0131lmak \xFCzere i\xE7e
+    aktar\u0131lacak ve bir Font asseti olarak listelenecektir."
   answers:
   - EVET
   - EVET
@@ -22,5 +23,6 @@ MonoBehaviour:
   network: 10
   experience: 20
   selfImprovment: 10
+  dayCost: 0
   characterImage: {fileID: 21300000, guid: c10c9cc97db1b2240942d776967ca0bc, type: 3}
   backgroundColor: {r: 0.9725491, g: 0.7254902, b: 0.019607844, a: 1}
