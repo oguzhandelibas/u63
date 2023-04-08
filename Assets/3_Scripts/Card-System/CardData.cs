@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class CardData : ScriptableObject
 {
     public bool forLeft;
+    public bool isRequired;
 
     public string cardText;
     public string[] answers;

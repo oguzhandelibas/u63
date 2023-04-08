@@ -8,12 +8,6 @@ public class IndicatorManager : MonoBehaviour
     public Image academicImage, networkImage, experienceImage, selfImprovementImage;
     
     public int degisimDegeri;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-         
-    }
 
     public void Change(int academic,int network, int experience,int selfImprovement)
     {
@@ -23,15 +17,15 @@ public class IndicatorManager : MonoBehaviour
         experienceImage.fillAmount += (experience/100);
         selfImprovementImage.fillAmount += (selfImprovement/100);
 
-
-        if( academicImage.fillAmount==0 || networkImage.fillAmount==0 || experienceImage.fillAmount==0 || selfImprovementImage.fillAmount==0 )
-        {
-            Debug.Log("lose");
-        }
-        //LoseControl();
-        // UpdateIndicators();
+        if( academicImage.fillAmount==0) UIManager.Instance.Lose(UIManager.LoseType.Academic);
+        else if(networkImage.fillAmount == 0) UIManager.Instance.Lose(UIManager.LoseType.Network);
+        else if (experienceImage.fillAmount == 0) UIManager.Instance.Lose(UIManager.LoseType.Experience);
+        else if (selfImprovementImage.fillAmount == 0) UIManager.Instance.Lose(UIManager.LoseType.SelfImprovement);
     }
 
+    // Tüm sayýlarý kendi katsayýsý ile çarp, hepsini topla,
+    // toplam katsayý puanýna böl, 70 baþarý puanýndan yüksekse KAZANDIK, aksi takdirde KAYBETTÝK
 
- 
+
+    
 }

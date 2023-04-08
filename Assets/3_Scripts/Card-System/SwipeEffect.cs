@@ -14,29 +14,33 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
     
     public void OnDrag(PointerEventData eventData)
     {
+        if (!GameManager.Instance.isGameContinue) return;
         card.OnSwipe();
         transform.localPosition = new Vector2(transform.localPosition.x+eventData.delta.x,transform.localPosition.y);
 
         if(transform.localPosition.x - _initialPosition.x > 0)
         {
             transform.localEulerAngles = new Vector3(0, 0, Mathf.LerpAngle(0, -30, (_initialPosition.x + transform.localPosition.x) / (Screen.width / 2)));
+            card.SetSwipeObjectActiveness(false, true);
         }
         else
         {
             transform.localEulerAngles = new Vector3(0, 0, Mathf.LerpAngle(0, 30, (_initialPosition.x - transform.localPosition.x) / (Screen.width / 2)));
+            card.SetSwipeObjectActiveness(true, false);
         }
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        if (!GameManager.Instance.isGameContinue) return;
         _initialPosition = transform.localPosition;
-        card.SetSwipeObjectActiveness(true);
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        card.SetSwipeObjectActiveness(false);
-        card.Swipe();
+        if (!GameManager.Instance.isGameContinue) return;
+        card.SetSwipeObjectActiveness(false,false);
+        
 
         _distanceMoved = Mathf.Abs(transform.localPosition.x - (_initialPosition.x));
         if(_distanceMoved< swipeDistance * Screen.width)
@@ -55,6 +59,7 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
             {
                 _swipeLeft = true;
             }
+            card.Swipe();
             StartCoroutine(MovedCard());
         }
         

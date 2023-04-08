@@ -18,7 +18,7 @@ public class Card : MonoBehaviour
 
     private void Start()
     {
-        SetSwipeObjectActiveness(false);
+        SetSwipeObjectActiveness(false,false);
     }
 
     public void OnSwipe()
@@ -44,11 +44,9 @@ public class Card : MonoBehaviour
         characterImage.sprite = cardData.characterImage;
     }
 
-    public void SetSwipeObjectActiveness(bool value)
+    public void SetSwipeObjectActiveness(bool value1, bool value2)
     {
-        foreach (var item in answers)
-        {
-            item.gameObject.SetActive(value);
-        }
+        answers[0].gameObject.SetActive(value1);
+        answers[1].gameObject.SetActive(value2);
     }
 }
