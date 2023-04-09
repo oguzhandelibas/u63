@@ -23,6 +23,6 @@ MonoBehaviour:
   experience: 0
   selfImprovment: 0
   dayCost: 20
-  characterName: "\xD6mer Abi"
+  characterName: "\xD6mer Erkmen"
   characterImage: {fileID: 21300000, guid: 840856685a1deb9428be9a0c8924ed9a, type: 3}
   backgroundColor: {r: 0.9725491, g: 0.7254902, b: 0.019607844, a: 1}
