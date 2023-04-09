@@ -25,4 +25,4 @@ MonoBehaviour:
   dayCost: 1
   characterName: Coursera
   characterImage: {fileID: 21300000, guid: c6152b6acae81fc4ca08c4df7f79d976, type: 3}
-  backgroundColor: {r: 1, g: 0.8055556, b: 0.25, a: 1}
+  backgroundColor: {r: 0.20392159, g: 0.6509804, b: 0.32156864, a: 1}

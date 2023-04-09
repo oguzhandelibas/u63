@@ -26,4 +26,4 @@ MonoBehaviour:
   dayCost: 1
   characterName: "Burak \xD6zdemir"
   characterImage: {fileID: 21300000, guid: 481e74d1471431b4eb8426410ebdc148, type: 3}
-  backgroundColor: {r: 1, g: 0.8055556, b: 0.25, a: 1}
+  backgroundColor: {r: 0.20392159, g: 0.6509804, b: 0.32156864, a: 1}

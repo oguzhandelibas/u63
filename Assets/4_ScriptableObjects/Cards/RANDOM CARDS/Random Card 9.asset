@@ -25,4 +25,4 @@ MonoBehaviour:
   dayCost: 1
   characterName: "Melike Parlakk\u0131l\u0131\xE7"
   characterImage: {fileID: 21300000, guid: f39eadbe816d1d64e8fac54f08cea659, type: 3}
-  backgroundColor: {r: 1, g: 0.8055556, b: 0.25, a: 1}
+  backgroundColor: {r: 0.20392159, g: 0.6509804, b: 0.32156864, a: 1}

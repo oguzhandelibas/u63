@@ -23,6 +23,6 @@ MonoBehaviour:
   experience: 0
   selfImprovment: 0
   dayCost: 0
-  characterName: Melike
-  characterImage: {fileID: 21300000, guid: f39eadbe816d1d64e8fac54f08cea659, type: 3}
+  characterName: Berke Tabak - Game Developer
+  characterImage: {fileID: 21300000, guid: c802d3b0f60b4b3409e8aebd3cca6d0d, type: 3}
   backgroundColor: {r: 0.5058824, g: 0.5294118, b: 0.70980394, a: 1}

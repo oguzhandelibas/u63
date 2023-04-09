@@ -18,10 +18,10 @@ MonoBehaviour:
   answers:
   - "U\xE7arak geliyorum"
   - "Tam kat\u0131lacakken aya\u011F\u0131m kayd\u0131.."
-  academicSuccess: 20
-  network: 0
-  experience: 0
-  selfImprovment: 10
+  academicSuccess: 5
+  network: 5
+  experience: 5
+  selfImprovment: 5
   dayCost: 1
   characterName: "Melike Parlakk\u0131l\u0131\xE7"
   characterImage: {fileID: 21300000, guid: f39eadbe816d1d64e8fac54f08cea659, type: 3}
