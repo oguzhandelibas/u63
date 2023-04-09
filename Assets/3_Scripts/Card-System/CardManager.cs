@@ -7,7 +7,7 @@ public class CardManager : Singleton<CardManager>
 {
     [SerializeField] private Vector2[] tuple;
 
-    [SerializeField] private CardData[] randomCardDatas;
+    [SerializeField] private List<CardData> randomCardDatas;
     [SerializeField] private CardData[] necessaryCardDatas;
 
     [SerializeField] private Transform cardsParent;
@@ -121,7 +121,9 @@ public class CardManager : Singleton<CardManager>
     private void CreateRandomCard(Card card, CardData cardData)
     {
         card.gameObject.name = "Random Card";
-        if (cardData == null) cardData = randomCardDatas[Random.Range(0,randomCardDatas.Length)];
+        int a = Random.Range(0, randomCardDatas.Count);
+        if (cardData == null) cardData = randomCardDatas[a];
+        randomCardDatas.RemoveAt(a);
         card.cardID = currentIndex + 1;
         card.SetCard(this, cardData);
         if (card.gameObject != cards[0]) card.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
