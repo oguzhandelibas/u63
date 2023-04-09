@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9214c7cf160617b4fa92ec20ccf37e46, type: 3}
-  m_Name: INTRO 2
+  m_Name: Necessary Card 19
   m_EditorClassIdentifier: 
-  forLeft: 0
+  forLeft: 1
   isRequired: 0
-  cardText: "Bu yolculukta sana belli ba\u015Fl\u0131 g\xF6revler veriliyor. Yapt\u0131\u011F\u0131n
-    se\xE7imler mezun olabilmen ad\u0131na \xE7ok \xF6nemli!"
+  cardText: "Mezunlar a\u011F\u0131na dahil ol!!"
   answers:
-  - Hmm...
-  - "Tamamd\u0131r"
+  - "Vay bee biz de ya\u015Fland\u0131k"
+  - "A\xE7\u0131l\u0131n ben mezunum!!"
   academicSuccess: 0
   network: 0
   experience: 0
   selfImprovment: 0
-  dayCost: 0
-  characterName: Berke Tabak - Game Developer
-  characterImage: {fileID: 21300000, guid: afc6f1e4c73dfd64ebc8dadb66187f11, type: 3}
-  backgroundColor: {r: 0.5058824, g: 0.5294118, b: 0.70980394, a: 1}
+  dayCost: 1
+  characterName: "At\u0131l Samanc\u0131o\u011Flu"
+  characterImage: {fileID: 21300000, guid: 9a59d4a4e2e506c4fa0ef814dbafa6b2, type: 3}
+  backgroundColor: {r: 0.9725491, g: 0.7254902, b: 0.019607844, a: 1}

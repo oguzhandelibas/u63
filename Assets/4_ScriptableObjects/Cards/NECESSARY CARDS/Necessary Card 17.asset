@@ -10,20 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9214c7cf160617b4fa92ec20ccf37e46, type: 3}
-  m_Name: INTRO 2
+  m_Name: Necessary Card 17
   m_EditorClassIdentifier: 
-  forLeft: 0
+  forLeft: 1
   isRequired: 0
-  cardText: "Bu yolculukta sana belli ba\u015Fl\u0131 g\xF6revler veriliyor. Yapt\u0131\u011F\u0131n
-    se\xE7imler mezun olabilmen ad\u0131na \xE7ok \xF6nemli!"
+  cardText: "Mezuniyet t\xF6reni ba\u015Fl\u0131yor! Sanal keplerini haz\u0131rla!!!"
   answers:
-  - Hmm...
-  - "Tamamd\u0131r"
+  - "Mezuniyet g\xFCn\xFC bug\xFCn tebrik edin beni \xE7abuk..."
+  - "Bitti mi \u015Fimdi? \u0130nsan ger\xE7ekten hayret ediyor..."
   academicSuccess: 0
   network: 0
   experience: 0
   selfImprovment: 0
-  dayCost: 0
-  characterName: Berke Tabak - Game Developer
-  characterImage: {fileID: 21300000, guid: afc6f1e4c73dfd64ebc8dadb66187f11, type: 3}
-  backgroundColor: {r: 0.5058824, g: 0.5294118, b: 0.70980394, a: 1}
+  dayCost: 1
+  characterName: "G\xFCnseli \xD6zdemir"
+  characterImage: {fileID: 21300000, guid: bc02d8a8a3a6dcb4c8d3c80292689431, type: 3}
+  backgroundColor: {r: 0.9725491, g: 0.7254902, b: 0.019607844, a: 1}

@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 0
   isRequired: 0
-  cardText: "Akademi Yolu'na Ho\u015F Geldin! Ilerlemek i\xE7in kart\u0131 sa\u011Fa
-    veya sola kayd\u0131r"
+  cardText: "Google Oyun ve Uygulama Akademisi Yolculu\u011Funa Ho\u015F Geldin!
+    Seni 6 ay s\xFCren ve dolu dolu ge\xE7ecek olan bir akademi yolculu\u011Fu bekliyor!
+    Ilerlemek i\xE7in kart\u0131 sa\u011Fa veya sola kayd\u0131r"
   answers:
   - "Ho\u015F buldum"
   - Sadede Gel

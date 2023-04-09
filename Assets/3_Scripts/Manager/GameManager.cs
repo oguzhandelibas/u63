@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
-    private int totalGameDay = 176;
+    private int totalGameDay = 183;
     public bool isGameContinue;
     public bool gameDone;
 
     private void Start()
     {
-        totalGameDay = 176;
+        totalGameDay = 183;
         gameDone = false;
         isGameContinue = true;
         SetDayStatus(0);

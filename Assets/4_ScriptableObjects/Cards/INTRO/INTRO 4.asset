@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 0
   isRequired: 0
-  cardText: "Baz\u0131 zartlar\u0131n zorunlu g\xF6revler i\xE7erdi\u011Fini unutma!
-    E\u011Fer do\u011Fru se\xE7imi yapmazsan ho\u015F \u015Feyler olmaz :)"
+  cardText: "Yapt\u0131\u011F\u0131n se\xE7imlere g\xF6re yukar\u0131da bulunan indicatorleri
+    tamamlaman gerek!\_Indicatorler s\u0131ras\u0131yla Teknik bilgini, network\xFCn\xFC,
+    tecr\xFCbeni ve ki\u015Fisel geli\u015Fimini ifade ediyor."
   answers:
   - Uuu
   - "Elimden geleni yapaca\u011F\u0131m"

@@ -1345,11 +1345,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tuple:
-  - {x: 0, y: 9}
-  - {x: 10, y: 13}
-  - {x: 16, y: 19}
-  - {x: 24, y: 25}
-  - {x: 28, y: 32}
+  - {x: 0, y: 7}
+  - {x: 9, y: 12}
+  - {x: 15, y: 18}
+  - {x: 23, y: 24}
+  - {x: 27, y: 34}
   randomCardDatas:
   - {fileID: 11400000, guid: 4612c9ba24bdf9d4c98d9419e5e24a60, type: 2}
   - {fileID: 11400000, guid: ac10ab3877aa86e4082bd947a76561ce, type: 2}
@@ -1382,6 +1382,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1e0440227b4ef9b48b7bd9bf1c98e8ba, type: 2}
   - {fileID: 11400000, guid: 02845306c9a4b524cb8e9de673e4f335, type: 2}
   - {fileID: 11400000, guid: 1aba850fd0cb28d47aa6a56d70b60c8f, type: 2}
+  - {fileID: 11400000, guid: c967d101c73d7a341827e0d1d7d1e738, type: 2}
+  - {fileID: 11400000, guid: c07a91e822e87dc4f9c6ffe2c0774136, type: 2}
+  - {fileID: 11400000, guid: f0068059217075a428f4f8a36edc5df1, type: 2}
   cardsParent: {fileID: 2049031843}
   cardObject: {fileID: 4223261586897927987, guid: 7ab60fc5f816e7c41888985c2deeb4ad, type: 3}
   cards: []

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 0
   isRequired: 0
-  cardText: "Yapt\u0131\u011F\u0131n se\xE7imlere g\xF6re yukar\u0131da g\xF6z\xFCken
-    indicator'lerdeki de\u011Ferler de\u011Fi\u015Fecek."
+  cardText: "Baz\u0131 kartlar\u0131n zorunlu g\xF6revler i\xE7erdi\u011Fini unutma!
+    E\u011Fer do\u011Fru se\xE7imi yapmazsan ho\u015F \u015Feyler olmaz :)"
   answers:
   - "G\xFCzelmi\u015F"
   - Tamam
