@@ -18,6 +18,12 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] private CardData[] loseCardDatas;
     [SerializeField] private CardData finalCard;
     [SerializeField] private TextMeshProUGUI dayText;
+    [SerializeField] private GameObject confetti;
+
+    private void Start()
+    {
+        confetti.SetActive(false);
+    }
 
     public void UpdateDay(int dayCount)
     {
@@ -59,7 +65,7 @@ public class UIManager : Singleton<UIManager>
     public void Win()
     {
         GameManager.Instance.gameDone = true;
-        
+        confetti.SetActive(true);
         CardManager.Instance.CreateCard(finalCard, true);
         finalCard.cardText = "Görünen o ki akademiyi baþarýyla tamamladýn. Tebrikler :) \n Baþarý Oranýn: %" + IndicatorManager.Instance.FinalCalculation().ToString("F0");
     }
