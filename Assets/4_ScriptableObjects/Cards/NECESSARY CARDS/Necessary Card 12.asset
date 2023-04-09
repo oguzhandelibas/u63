@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 1
   isRequired: 1
-  cardText: "Akademi\u0307 e\u011FI\u0307ti\u0307mleri\u0307nde son d\xFCzl\xFC\u011Fe
-    geldi\u0307k bu ay b\xFCt\xFCn e\u011FI\u0307ti\u0307mleri\u0307ni\u0307 bi\u0307ti\u0307rmeli\u0307si\u0307n!"
+  cardText: "Akademi e\u011Fitimlerinde son d\xFCzl\xFC\u011Fe geldik bu ay b\xFCt\xFCn
+    e\u011Fitimlerini bitirmelisin!"
   answers:
   - "\xC7oktan bitti bile"
   - "\u015Eu olaylar bi bitsin e\u011Fitimlere de bakar\u0131m"

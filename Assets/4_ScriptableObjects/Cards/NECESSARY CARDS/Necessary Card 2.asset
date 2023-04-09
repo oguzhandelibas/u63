@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 1
   isRequired: 0
-  cardText: "Akademi dersleri ba\u015Flad\u0131 !!! Kat\u0131lmay\u0131 d\xFC\u015F\xFCn\xFCyor
+  cardText: "Akademi dersleri ba\u015Flad\u0131! Kat\u0131lmay\u0131 d\xFC\u015F\xFCn\xFCyor
     musun?"
   answers:
   - "S\xFCper, hemen ba\u015Fl\u0131yorum!"
@@ -24,5 +24,6 @@ MonoBehaviour:
   experience: 0
   selfImprovment: 10
   dayCost: 30
+  characterName: 
   characterImage: {fileID: 21300000, guid: bc02d8a8a3a6dcb4c8d3c80292689431, type: 3}
   backgroundColor: {r: 0.9725491, g: 0.7254902, b: 0.019607844, a: 1}

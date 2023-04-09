@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 1
   isRequired: 0
-  cardText: "Ideathon ba\u015Fl\u0131yor!! Haz\u0131r m\u0131s\u0131nn??"
+  cardText: "Ideathon ba\u015Fl\u0131yor! Haz\u0131r m\u0131s\u0131n?"
   answers:
   - "Fikir \xFCretmek bizim i\u015Fimiz"
   - Ideathon nedir?

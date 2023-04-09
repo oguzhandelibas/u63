@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 1
   isRequired: 0
-  cardText: "Unity Soru Cevap Bulu\u015Fmas\u0131"
+  cardText: "Unity soru cevap bulu\u015Fmas\u0131na kat\u0131lacak m\u0131s\u0131n?"
   answers:
   - "Assetlerimi aldim geli\u0307yorum"
   - "Hay\u0131r, onun yerine slack'te neler olmu\u015F ona bakaca\u011F\u0131m"
@@ -23,5 +23,6 @@ MonoBehaviour:
   experience: 0
   selfImprovment: 0
   dayCost: 1
+  characterName: 
   characterImage: {fileID: 21300000, guid: c6e0890bfb41a4541b3be4dfab15b05b, type: 3}
   backgroundColor: {r: 1, g: 0.8055556, b: 0.25, a: 1}

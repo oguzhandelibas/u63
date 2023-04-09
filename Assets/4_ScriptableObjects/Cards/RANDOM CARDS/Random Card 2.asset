@@ -14,15 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 1
   isRequired: 0
-  cardText: "Giri\u015Fimcilik Soru Cevap Bulu\u015Fmas\u0131 Yeni Nesil Kafas\u0131yla
+  cardText: "Giri\u015Fimcilik soru cevap bulu\u015Fmas\u0131 yeni nesil kafas\u0131yla
     ba\u015Fl\u0131yor :)"
   answers:
-  - "Evet akl\u0131mdakileri bir an \xF6nce sormak istiyorum"
+  - "Akl\u0131mdakileri bir an \xF6nce sormak istiyorum"
   - "Microsoft'u mu kuraca\u011F\u0131m sanki"
   academicSuccess: 10
   network: 20
   experience: 10
   selfImprovment: 10
   dayCost: 1
+  characterName: 
   characterImage: {fileID: 21300000, guid: 831e656e6a0ff1c46be0b167f160a0cb, type: 3}
   backgroundColor: {r: 1, g: 0.8055556, b: 0.25, a: 1}
