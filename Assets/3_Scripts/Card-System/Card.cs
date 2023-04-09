@@ -26,7 +26,6 @@ public class Card : MonoBehaviour
 
     public void RemoveCard()
     {
-        
         cardManager.RemoveCard(gameObject);
     }
 

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 0
   isRequired: 0
-  cardText: "2. Gi\u0307thub g\xF6revi\u0307ni\u0307 tamamlamaya ne dersi\u0307n?"
+  cardText: "2. GitHub g\xF6revini tamamlamaya ne dersin?"
   answers:
   - "Arkada\u015Flar 101'e \xE7a\u011F\u0131rd\u0131."
   - "\xC7oktan hallettim ben ;)"

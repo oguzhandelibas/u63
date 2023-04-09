@@ -16,7 +16,7 @@ MonoBehaviour:
   isRequired: 1
   cardText: "Ayl\u0131k tamamlaman gereken g\xF6revlerin son tarihi yakla\u015F\u0131yor!!"
   answers:
-  - "Si\u0307stem \xE7\xF6kt\xFC! Deadline tarihi erteleni\u0307r umar\u0131m \U0001F630"
+  - "Sistem \xE7\xF6kt\xFC! Deadline tarihi ertelenir umar\u0131m"
   - "Bu zamana g\xF6rev mi kal\u0131r?"
   academicSuccess: 5
   network: 0

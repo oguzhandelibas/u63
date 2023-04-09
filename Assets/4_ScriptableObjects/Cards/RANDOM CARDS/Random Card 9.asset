@@ -20,7 +20,7 @@ MonoBehaviour:
   - "Cs'den arkada\u015Flar bekli\u0307yor "
   academicSuccess: 10
   network: 30
-  experience: 10
+  experience: -10
   selfImprovment: 20
   dayCost: 1
   characterName: "Melike Parlakk\u0131l\u0131\xE7"

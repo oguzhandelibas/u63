@@ -63,13 +63,13 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
             
             
         }
-        
     }
 
     private IEnumerator MovedCard()
     {
         float time = 0;
         card.cardManager.cards[1].GetComponent<Card>().cardText.gameObject.SetActive(true);
+        card.cardManager.cards[1].transform.localScale = new Vector3(1, 1, 1);
         card.cardText.gameObject.SetActive(false);
         while (GetComponent<Image>().color != new Color(1, 1, 1, 0))
         {

@@ -20,7 +20,7 @@ MonoBehaviour:
   - "Unity e\u011Fitimlerimi tamamlamal\u0131y\u0131m"
   academicSuccess: -10
   network: 20
-  experience: 10
+  experience: -5
   selfImprovment: 10
   dayCost: 1
   characterName: "Sure K\xF6se Uluta\u015F"

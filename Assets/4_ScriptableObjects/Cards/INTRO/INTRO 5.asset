@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 0
   isRequired: 0
-  cardText: "Son olaralk a\u015Fa\u011F\u0131daki g\xFCn sayac\u0131n\u0131n sonuna
+  cardText: "Son olarak a\u015Fa\u011F\u0131daki g\xFCn sayac\u0131n\u0131n sonuna
     ula\u015F\u0131p akademiyi ba\u015Far\u0131yla tamamlaman gerekti\u011Fini s\xF6ylememe
     gerek bile yoktur san\u0131r\u0131m? Yolun a\xE7\u0131k olsun..."
   answers:

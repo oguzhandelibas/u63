@@ -65,8 +65,6 @@ public class CardManager : Singleton<CardManager>
     {
         currentIndex++;
 
-        
-
         if (totalCardCount == currentIndex) 
         {
             GameManager.Instance.isGameContinue = false;
@@ -82,8 +80,9 @@ public class CardManager : Singleton<CardManager>
             {
                 item.SetActive(false);
             }
-            Debug.Log("false edildili");
+            
             Card lastCard = Instantiate(cardObject, cardsParent).GetComponent<Card>();
+            lastCard.transform.localScale = new Vector3(1, 1, 1);
             lastCard.cardText.gameObject.SetActive(true);
             lastCard.transform.SetSiblingIndex(2);
             lastCard.SetCard(this, cardData);
@@ -104,7 +103,6 @@ public class CardManager : Singleton<CardManager>
 
 
             card.gameObject.name = "Necessary Card " + (necessaryIndex);
-            Debug.Log("oluþturuldu");
             if (cardData == null) cardData = necessaryCardDatas[necessaryIndex];
             card.cardID = currentIndex + 1;
             card.SetCard(this, cardData);
@@ -114,8 +112,6 @@ public class CardManager : Singleton<CardManager>
             if (GameManager.Instance.gameDone) card.gameObject.SetActive(false);
             return card;
         }
-        
-        
     }
 
     private void CreateRandomCard(Card card, CardData cardData)
@@ -133,8 +129,8 @@ public class CardManager : Singleton<CardManager>
     {
         if (cards.Count > 1 && currentIndex <= tuple[tuple.Length-1].y && Mathf.Abs(distanceMoved) > 0)
         {
-            float step = Mathf.SmoothStep(0.8f, 1, Mathf.Abs(distanceMoved) / (Screen.width / 2));
+            float step = Mathf.SmoothStep(0.8f, 1, Mathf.Abs(distanceMoved) / (Screen.width / 4f));
             cards[1].transform.localScale = new Vector3(step, step, step);
-        }
+        }  
     }
 }
