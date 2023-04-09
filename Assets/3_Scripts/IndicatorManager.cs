@@ -26,7 +26,7 @@ public class IndicatorManager : Singleton<IndicatorManager>
         else if (selfImprovementImage.fillAmount == 0) UIManager.Instance.Lose(UIManager.LoseType.SelfImprovement);
     }
 
-    public void FinalCalculation()
+    public float FinalCalculation()
     {
         // Katsayýlarý tekrar yüzlük sisteme döndür
         // Tüm sayýlarý kendi katsayýsý ile çarp, hepsini topla,
@@ -42,6 +42,8 @@ public class IndicatorManager : Singleton<IndicatorManager>
 
         finalGrade = (academic * 5) + (network * 2) + (experience * 2) + (selfImprovement * 3);
         finalGrade = finalGrade / 12;
+
+        return finalGrade;
 
         if(finalGrade>70)
         {

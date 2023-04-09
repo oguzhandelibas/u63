@@ -16,7 +16,7 @@ MonoBehaviour:
   isRequired: 0
   cardText: "Giri\u015Fimciler i\xE7in hukuk soru cevap bulu\u015Fmas\u0131"
   answers:
-  - "\u0130lerideki giri\u015Fimim i\xE7in gereken hukuk temellerini \xF6\u011Frenmek
+  - "Ilerideki giri\u015Fimim i\xE7in gereken hukuk temellerini \xF6\u011Frenmek
     istiyorum"
   - "Hukuk da gerekli mi emin de\u011Filim"
   academicSuccess: 10

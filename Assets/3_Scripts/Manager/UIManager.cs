@@ -59,6 +59,8 @@ public class UIManager : Singleton<UIManager>
     public void Win()
     {
         GameManager.Instance.gameDone = true;
+        
         CardManager.Instance.CreateCard(finalCard, true);
+        finalCard.cardText = "Görünen o ki akademiyi baþarýyla tamamladýn. Tebrikler :) \n Baþarý Oranýn: %" + IndicatorManager.Instance.FinalCalculation().ToString("F0");
     }
 }

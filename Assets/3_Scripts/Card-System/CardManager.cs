@@ -90,6 +90,8 @@ public class CardManager : Singleton<CardManager>
         }
         else
         {
+            if (necessaryIndex > necessaryCardDatas.Length - 1) return null;
+
             Card card = Instantiate(cardObject, cardsParent).GetComponent<Card>();
             card.transform.SetSiblingIndex(0);
             cards.Add(card.gameObject);
@@ -101,7 +103,7 @@ public class CardManager : Singleton<CardManager>
                 return card;
             }
 
-
+            
             card.gameObject.name = "Necessary Card " + (necessaryIndex);
             if (cardData == null) cardData = necessaryCardDatas[necessaryIndex];
             card.cardID = currentIndex + 1;
