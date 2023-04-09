@@ -22,11 +22,12 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
     {
         card.OnSwipe();
         cardTransform.localPosition = new Vector2(cardTransform.localPosition.x+eventData.delta.x, cardTransform.localPosition.y);
-
-        if(cardTransform.localPosition.x - _initialPosition.x > 0)
+        card.shadow.enabled = false;
+        if (cardTransform.localPosition.x - _initialPosition.x > 0)
         {
             cardTransform.localEulerAngles = new Vector3(0, 0, Mathf.LerpAngle(0, -30, (_initialPosition.x + cardTransform.localPosition.x) / (Screen.width / 2)));
             card.SetSwipeObjectActiveness(false, true);
+            
         }
         else
         {
@@ -45,6 +46,7 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
         {
             cardTransform.localPosition = _initialPosition;
             cardTransform.localEulerAngles = Vector3.zero;
+            card.shadow.enabled = true;
         }
         else
         {

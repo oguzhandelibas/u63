@@ -15,6 +15,7 @@ public class Card : MonoBehaviour
     [SerializeField] private TextMeshProUGUI[] answers;
     [SerializeField] private TextMeshProUGUI characterName;
 
+    public Image shadow;
     [SerializeField] private Image background;
     [SerializeField] private Image characterImage;
 
@@ -34,7 +35,6 @@ public class Card : MonoBehaviour
         nextCard = cardManager.CreateCard();
         
     }
-
 
     public void OnSwipe()
     {
