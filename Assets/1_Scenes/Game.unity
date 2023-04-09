@@ -1345,11 +1345,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tuple:
-  - {x: 0, y: 4}
-  - {x: 6, y: 9}
-  - {x: 12, y: 15}
-  - {x: 20, y: 21}
-  - {x: 24, y: 28}
+  - {x: 0, y: 9}
+  - {x: 10, y: 13}
+  - {x: 16, y: 19}
+  - {x: 24, y: 25}
+  - {x: 28, y: 32}
   randomCardDatas:
   - {fileID: 11400000, guid: 4612c9ba24bdf9d4c98d9419e5e24a60, type: 2}
   - {fileID: 11400000, guid: ac10ab3877aa86e4082bd947a76561ce, type: 2}
@@ -1361,6 +1361,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bdb44eb51b7148e4d8c8714943800f0f, type: 2}
   - {fileID: 11400000, guid: 346c26462b324ce4192058dab656b677, type: 2}
   necessaryCardDatas:
+  - {fileID: 11400000, guid: 4086e23dae9903e4084992674603d388, type: 2}
+  - {fileID: 11400000, guid: d0deeef3357315c4b981578bc2464dc3, type: 2}
+  - {fileID: 11400000, guid: 4338d5cfcdf339943a3cfb71482f64a7, type: 2}
+  - {fileID: 11400000, guid: e248249e8edbb324fbba5bb5994f0507, type: 2}
+  - {fileID: 11400000, guid: bf48e881280b6e54fb0dd652402120fc, type: 2}
   - {fileID: 11400000, guid: 4710dbab0234a3745a98ab35256d52ff, type: 2}
   - {fileID: 11400000, guid: 63db90128e2e1514cbc0c161d6cdf701, type: 2}
   - {fileID: 11400000, guid: 88773676f549a27488b1135fe7cf04dd, type: 2}
