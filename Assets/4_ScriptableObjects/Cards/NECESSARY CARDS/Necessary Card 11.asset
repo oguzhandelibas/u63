@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 1
   isRequired: 0
-  cardText: "3.Gi\u0307thub g\xF6revi\u0307ni\u0307 tamamlamaya ne dersi\u0307n?"
+  cardText: "3.Gi\u0307thub g\xF6revini tamamlamaya ne dersi\u0307n?"
   answers:
   - "Github'a \xE7al\u0131\u015F"
   - LinkedIN'e bak

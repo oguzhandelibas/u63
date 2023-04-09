@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 1
   isRequired: 1
-  cardText: "Game Jam ba\u015Fl\u0131yorr assetleri\u0307ni\u0307zi\u0307 haz\u0131rlay\u0131n
-    !!!"
+  cardText: "Game Jam ba\u015Fl\u0131yorr assetlerinizi haz\u0131rlay\u0131n!"
   answers:
   - "Uykusuz 72 saat ba\u015Flas\u0131n o zaman ;)"
   - Jam ne ya??

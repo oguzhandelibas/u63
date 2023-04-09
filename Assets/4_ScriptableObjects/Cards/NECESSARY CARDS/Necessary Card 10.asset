@@ -16,12 +16,13 @@ MonoBehaviour:
   isRequired: 0
   cardText: "Game Jam nas\u0131l ge\xE7ti?"
   answers:
-  - "Hediye \xE7ekini kapt\u0131k!!"
+  - "Hediye \xE7ekini kapt\u0131k!"
   - "Tecr\xFCbe kazand\u0131k.."
   academicSuccess: 0
   network: 0
   experience: 0
   selfImprovment: 0
   dayCost: 1
+  characterName: 
   characterImage: {fileID: 21300000, guid: bc02d8a8a3a6dcb4c8d3c80292689431, type: 3}
   backgroundColor: {r: 0.9725491, g: 0.7254902, b: 0.019607844, a: 1}

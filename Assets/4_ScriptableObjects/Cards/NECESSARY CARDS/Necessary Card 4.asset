@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 0
   isRequired: 1
-  cardText: "Ayl\u0131k tamamlaman gereken g\xF6revlerin son tarihi yakla\u015F\u0131yor!!"
+  cardText: "Ayl\u0131k tamamlaman gereken g\xF6revlerin son tarihi yakla\u015F\u0131yor!"
   answers:
-  - "Aman aman nereye geldik daha demi\u0307n oryantasyondayd\u0131k"
+  - "Aman aman nerelere geldik daha demin oryantasyondayd\u0131k"
   - "Bu zamana g\xF6rev mi kal\u0131r?"
   academicSuccess: 0
   network: 0

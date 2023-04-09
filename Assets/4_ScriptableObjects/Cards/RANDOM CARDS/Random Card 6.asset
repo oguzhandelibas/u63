@@ -14,14 +14,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 1
   isRequired: 0
-  cardText: "Oyun Sanat\u0131 soru cevap bulu\u015Fmas\u0131 ba\u015Fl\u0131yor"
+  cardText: "Oyun Sanat\u0131 Soru Cevap bulu\u015Fmas\u0131nda sorular\u0131n\u0131
+    sormaya ne dersin?"
   answers:
-  - "Oyun sanat\u0131 oyunun bel kemiklerinden"
+  - "Evet, oyun sanat\u0131 hakk\u0131nda da bilgi edinmek istiyorum"
   - "Ben anlamam kodumu yazar ge\xE7erim"
   academicSuccess: 0
   network: 0
   experience: 10
   selfImprovment: 20
   dayCost: 1
+  characterName: 
   characterImage: {fileID: 21300000, guid: 428933dc5120cb84b8234d65f47135ae, type: 3}
   backgroundColor: {r: 1, g: 0.8055556, b: 0.25, a: 1}

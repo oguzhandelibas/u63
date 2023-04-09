@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 0
   isRequired: 0
-  cardText: "Yaz\u0131l\u0131mc\u0131lar i\xE7in \u0130ngilizce Canl\u0131 Yay\u0131n\u0131
-    Ba\u015Fl\u0131yor!"
+  cardText: "Yaz\u0131l\u0131mc\u0131lar i\xE7in ingilizce canl\u0131 yay\u0131n\u0131
+    ba\u015Fl\u0131yor!"
   answers:
   - Fine thanks, and you?
   - "Adimi yaz\u0131n yaza c1'i\u0307m"
@@ -24,5 +24,6 @@ MonoBehaviour:
   experience: 0
   selfImprovment: 20
   dayCost: 1
-  characterImage: {fileID: 0}
+  characterName: 
+  characterImage: {fileID: 21300000, guid: be3e681dd70909a42854d54b9f57d3d1, type: 3}
   backgroundColor: {r: 1, g: 0.8055556, b: 0.25, a: 1}
