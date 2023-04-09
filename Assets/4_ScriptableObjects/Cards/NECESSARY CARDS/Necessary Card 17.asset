@@ -17,12 +17,12 @@ MonoBehaviour:
   cardText: "Mezuniyet t\xF6reni ba\u015Fl\u0131yor! Sanal keplerini haz\u0131rla!!!"
   answers:
   - "Mezuniyet g\xFCn\xFC bug\xFCn tebrik edin beni \xE7abuk..."
-  - "Bitti mi \u015Fimdi? \u0130nsan ger\xE7ekten hayret ediyor..."
+  - "Bitti mi \u015Fimdi? Insan ger\xE7ekten hayret ediyor..."
   academicSuccess: 0
   network: 0
   experience: 0
   selfImprovment: 0
   dayCost: 1
   characterName: "G\xFCnseli \xD6zdemir"
-  characterImage: {fileID: 21300000, guid: bc02d8a8a3a6dcb4c8d3c80292689431, type: 3}
+  characterImage: {fileID: 21300000, guid: 4525d7d89ec250343ab6528e753b4d08, type: 3}
   backgroundColor: {r: 0.9725491, g: 0.7254902, b: 0.019607844, a: 1}

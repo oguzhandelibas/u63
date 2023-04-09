@@ -49,12 +49,10 @@ public class Card : MonoBehaviour
             if (cardData.forLeft == left)
             {
                 IndicatorManager.Instance.Change(cardData.academicSuccess, cardData.network, cardData.experience, cardData.selfImprovment);
-                Debug.Log("DEVAM");
             }
             else
             {
                 UIManager.Instance.Lose(UIManager.LoseType.Requirement);
-                Debug.Log("ATILDIN!");
             }
         }
         else
@@ -96,5 +94,10 @@ public class Card : MonoBehaviour
     {
         answers[0].gameObject.SetActive(value1);
         answers[1].gameObject.SetActive(value2);
+    }
+
+    public void IndicatorCircleActivenessValue()
+    {
+
     }
 }

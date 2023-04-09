@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 0
   isRequired: 0
-  cardText: "Yapt\u0131\u011F\u0131n se\xE7imlere g\xF6re yukar\u0131da bulunan indicatorleri
-    tamamlaman gerek!\_Indicatorler s\u0131ras\u0131yla Teknik bilgini, network\xFCn\xFC,
+  cardText: "Yapt\u0131\u011F\u0131n se\xE7imlere g\xF6re yukar\u0131da bulunan g\xF6stergeleri
+    tamamlaman gerek!\_G\xF6stergeler s\u0131ras\u0131yla Teknik bilgini, network\xFCn\xFC,
     tecr\xFCbeni ve ki\u015Fisel geli\u015Fimini ifade ediyor."
   answers:
   - Uuu
@@ -28,3 +28,6 @@ MonoBehaviour:
   characterName: "O\u011Fuzhan Deliba\u015F - Game Developer"
   characterImage: {fileID: 21300000, guid: f2280a78d39ba064eb74e05d1b991350, type: 3}
   backgroundColor: {r: 0.5058824, g: 0.5294118, b: 0.70980394, a: 1}
+  cardFunction:
+    m_PersistentCalls:
+      m_Calls: []

@@ -27,6 +27,7 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
         {
             cardTransform.localEulerAngles = new Vector3(0, 0, Mathf.LerpAngle(0, -30, (_initialPosition.x + cardTransform.localPosition.x) / (Screen.width / 2)));
             card.SetSwipeObjectActiveness(false, true);
+            //IndicatorManager.Instance.IndicatorCircleActiveness()
             
         }
         else

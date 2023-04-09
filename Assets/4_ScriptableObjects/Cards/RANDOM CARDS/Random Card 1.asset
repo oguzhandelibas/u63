@@ -16,7 +16,7 @@ MonoBehaviour:
   isRequired: 0
   cardText: "Unity soru cevap bulu\u015Fmas\u0131na kat\u0131lacak m\u0131s\u0131n?"
   answers:
-  - "Assetlerimi aldim geli\u0307yorum"
+  - "Assetlerimi ald\u0131m geliyorum"
   - "Hay\u0131r, onun yerine slack'te neler olmu\u015F ona bakaca\u011F\u0131m"
   academicSuccess: 20
   network: -10

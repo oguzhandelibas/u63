@@ -32,7 +32,7 @@ public class UIManager : Singleton<UIManager>
             dayCount = 0;
             Win();
         }
-        dayText.text = "Akademýde son " + dayCount + " gün!";
+        dayText.text = "Akademide son " + dayCount + " gün!";
     }
 
     public void Lose(LoseType _loseType)

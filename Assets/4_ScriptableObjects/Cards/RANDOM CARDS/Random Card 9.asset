@@ -16,8 +16,8 @@ MonoBehaviour:
   isRequired: 0
   cardText: "Networking e\u011Fitimlerine sen de gel"
   answers:
-  - "Linkedin'de ba\u011Flant\u0131 kasmak laz\u0131m  geliyorum"
-  - "Cs'den arkada\u015Flar bekli\u0307yor "
+  - "Linkedin'de ba\u011Flant\u0131 kasmak laz\u0131m geliyorum"
+  - "Cs'den arkada\u015Flar bekli\u0307yor"
   academicSuccess: 10
   network: 30
   experience: -10

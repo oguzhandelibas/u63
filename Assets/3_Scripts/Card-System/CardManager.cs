@@ -14,6 +14,8 @@ public class CardManager : Singleton<CardManager>
     [SerializeField] private GameObject cardObject;
     public List<GameObject> cards = new List<GameObject>();
 
+    [SerializeField] private GameObject[] indicators;
+
     public bool necessaryCardTime = true;
     public int tupleIndex = 0;
     public int currentIndex;
@@ -28,6 +30,27 @@ public class CardManager : Singleton<CardManager>
         currentIndex = -1;
         CreateCard(); 
         CreateCard();
+    }
+
+    public void ShowIndicator()
+    {
+        StartCoroutine(ShowIndicatorRoutine());
+    }
+
+    IEnumerator ShowIndicatorRoutine()
+    {
+        yield return new WaitForSeconds(1);
+        for (int i = 0; i < indicators.Length; i++)
+        {
+            indicators[i].SetActive(true);
+            yield return new WaitForSeconds(1);
+        }
+        yield return new WaitForSeconds(1);
+        for (int i = indicators.Length-1; i >= 0; i--)
+        {
+            indicators[i].SetActive(false);
+            yield return new WaitForSeconds(1);
+        }
     }
 
     public void RemoveCard(GameObject cardObj)
@@ -103,10 +126,12 @@ public class CardManager : Singleton<CardManager>
                 return card;
             }
 
-            
+            if (currentIndex + 1 == 4) ShowIndicator();
+
             card.gameObject.name = "Necessary Card " + (necessaryIndex);
             if (cardData == null) cardData = necessaryCardDatas[necessaryIndex];
             card.cardID = currentIndex + 1;
+            
             card.SetCard(this, cardData);
 
             if (card.gameObject != cards[0]) card.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);

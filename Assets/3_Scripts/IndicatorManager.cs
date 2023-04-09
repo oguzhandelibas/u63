@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class IndicatorManager : Singleton<IndicatorManager>
 {
     public Image academicImage, networkImage, experienceImage, selfImprovementImage;
+    [SerializeField] private GameObject[] indicatorCircles;
 
     private void Start()
     {
@@ -26,6 +27,14 @@ public class IndicatorManager : Singleton<IndicatorManager>
         else if (selfImprovementImage.fillAmount == 0) UIManager.Instance.Lose(UIManager.LoseType.SelfImprovement);
     }
 
+    public void IndicatorCircleActiveness(bool academic, bool network, bool experience, bool selfImprovement)
+    {
+        indicatorCircles[0].SetActive(academic);
+        indicatorCircles[1].SetActive(network);
+        indicatorCircles[2].SetActive(experience);
+        indicatorCircles[3].SetActive(selfImprovement);
+    }
+
     public float FinalCalculation()
     {
         // Katsayýlarý tekrar yüzlük sisteme döndür
@@ -44,19 +53,19 @@ public class IndicatorManager : Singleton<IndicatorManager>
         finalGrade = finalGrade / 12;
 
         return finalGrade;
-
-        if(finalGrade>70)
-        {
-            // Win
-        }
-
-        else
-        {
-            // Lose
-        }
     }
 
+    public void _IndicatorActiveness(GameObject obj)
+    {
+        StartCoroutine(IndicatorActivenessRoutine(obj));
+    }
 
+    IEnumerator IndicatorActivenessRoutine(GameObject obj)
+    {
+        obj.SetActive(true);
+        yield return new WaitForSeconds(1);
+        obj.SetActive(false);
+    }
 
 
 
