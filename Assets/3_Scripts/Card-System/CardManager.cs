@@ -105,10 +105,10 @@ public class CardManager : Singleton<CardManager>
                 item.SetActive(false);
             }
             
-            Card lastCard = Instantiate(cardObject, cardsParent).GetComponent<Card>();
+            Card lastCard = Instantiate(cardObject, cardsParent).GetComponentInChildren<Card>();
             lastCard.transform.localScale = new Vector3(1, 1, 1);
             lastCard.cardText.gameObject.SetActive(true);
-            lastCard.transform.SetSiblingIndex(2);
+            lastCard.transform.parent.SetSiblingIndex(2);
             lastCard.SetCard(this, cardData);
             return lastCard;
         }
@@ -116,8 +116,8 @@ public class CardManager : Singleton<CardManager>
         {
             if (necessaryIndex > necessaryCardDatas.Length - 1) return null;
 
-            Card card = Instantiate(cardObject, cardsParent).GetComponent<Card>();
-            card.transform.SetSiblingIndex(0);
+            Card card = Instantiate(cardObject, cardsParent).GetComponentInChildren<Card>();
+            card.transform.parent.SetSiblingIndex(0);
             cards.Add(card.gameObject);
 
 
