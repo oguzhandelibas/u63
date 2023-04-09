@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   forLeft: 1
   isRequired: 0
-  cardText: "Giri\u015Fimciler i\xE7in hukuk soru cevap bulu\u015Fmas\u0131"
+  cardText: "Giri\u015Fimciler i\xE7in hukuk soru cevap bulu\u015Fmas\u0131na gelmeye
+    ne dersin?"
   answers:
-  - "Ilerideki giri\u015Fimim i\xE7in gereken hukuk temellerini \xF6\u011Frenmek
-    istiyorum"
-  - "Hukuk da gerekli mi emin de\u011Filim"
+  - "San\u0131\u011F\u0131n 2022 say\u0131l\u0131 Oyun Kanuna g\xF6re gelmesine karar
+    verildi!"
+  - "Avukat m\u0131 olucam sanki?"
   academicSuccess: 10
   network: 20
   experience: 0
