@@ -59,6 +59,12 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
             {
                 _swipeLeft = true;
             }
+
+            if (card.cardManager.cards.Count > 1)
+            {
+                card.cardManager.cards[1].transform.localScale = new Vector3(1, 1, 1);
+                card.cardText.gameObject.SetActive(false);
+            }
             StartCoroutine(MovedCard());
         }
     }
@@ -66,7 +72,6 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
     private IEnumerator MovedCard()
     {
         float time = 0;
-        
         
         while (GetComponent<Image>().color != new Color(1, 1, 1, 0))
         {
@@ -89,13 +94,9 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
         if (card.cardManager.cards.Count > 1)
         {
             card.cardManager.cards[1].GetComponent<Card>().cardText.gameObject.SetActive(true);
-            card.cardManager.cards[1].transform.localScale = new Vector3(1, 1, 1);
-            card.cardText.gameObject.SetActive(false);
-            card.RemoveCard();
-            card.Swipe(_swipeLeft);
         }
-        
-        
-        Destroy(gameObject, 0.5f);
+        card.RemoveCard();
+        card.Swipe(_swipeLeft);
+        Destroy(gameObject);
     }
 }

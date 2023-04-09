@@ -22,6 +22,7 @@ public class CardManager : Singleton<CardManager>
     public int necessaryIndex = 0;
     private int totalCardCount;
 
+
     private void Start()
     {
         totalCardCount = (int)tuple[tuple.Length - 1].y;
