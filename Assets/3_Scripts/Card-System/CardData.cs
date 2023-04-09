@@ -26,6 +26,7 @@ public class CardData : ScriptableObject
     public int dayCost;
 
     [Header("Card Design")]
+    public string characterName;
     public Sprite characterImage;
     public Color backgroundColor;
 }

@@ -86,6 +86,7 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
             
             yield return null;
         }
+        if (GameManager.Instance.gameDone) GameManager.Instance.RestartGame();
         card.RemoveCard();
         card.Swipe(_swipeLeft);
         Destroy(gameObject);

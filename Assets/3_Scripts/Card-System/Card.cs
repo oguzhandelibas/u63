@@ -13,6 +13,7 @@ public class Card : MonoBehaviour
 
     public TextMeshProUGUI cardText;
     [SerializeField] private TextMeshProUGUI[] answers;
+    [SerializeField] private TextMeshProUGUI characterName;
 
     [SerializeField] private Image background;
     [SerializeField] private Image characterImage;
@@ -43,7 +44,7 @@ public class Card : MonoBehaviour
     public void Swipe(bool left)
     {
         if (!GameManager.Instance.isGameContinue) return;
-
+        GameManager.Instance.SetDayStatus(cardData.dayCost);
         if (cardData.isRequired)
         {
             if (cardData.forLeft == left)
@@ -53,6 +54,7 @@ public class Card : MonoBehaviour
             }
             else
             {
+                UIManager.Instance.Lose(UIManager.LoseType.Requirement);
                 Debug.Log("ATILDIN!");
             }
         }
@@ -82,6 +84,8 @@ public class Card : MonoBehaviour
         cardText.text = cardData.cardText;
         answers[0].text = cardData.answers[0];
         answers[1].text = cardData.answers[1];
+
+        if (cardData.characterName != null) characterName.text = cardData.characterName;
 
         background.color = cardData.backgroundColor;
         characterImage.sprite = cardData.characterImage;

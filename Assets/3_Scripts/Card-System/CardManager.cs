@@ -61,9 +61,11 @@ public class CardManager : Singleton<CardManager>
         }
     }
 
-    public Card CreateCard(CardData cardData = null)
+    public Card CreateCard(CardData cardData = null, bool isLastCard = false)
     {
         currentIndex++;
+
+        
 
         if (totalCardCount == currentIndex) 
         {
@@ -74,27 +76,45 @@ public class CardManager : Singleton<CardManager>
             
         CheckNecessaryCard();
 
-        Card card = Instantiate(cardObject, cardsParent).GetComponent<Card>();
-        card.transform.SetSiblingIndex(0);
-        cards.Add(card.gameObject);
-        
-
-        if (!necessaryCardTime)
+        if (isLastCard)
         {
-            CreateRandomCard(card, cardData);
+            foreach (var item in cards)
+            {
+                item.SetActive(false);
+            }
+            Debug.Log("false edildili");
+            Card lastCard = Instantiate(cardObject, cardsParent).GetComponent<Card>();
+            lastCard.cardText.gameObject.SetActive(true);
+            lastCard.transform.SetSiblingIndex(2);
+            lastCard.SetCard(this, cardData);
+            return lastCard;
+        }
+        else
+        {
+            Card card = Instantiate(cardObject, cardsParent).GetComponent<Card>();
+            card.transform.SetSiblingIndex(0);
+            cards.Add(card.gameObject);
+
+
+            if (!necessaryCardTime)
+            {
+                CreateRandomCard(card, cardData);
+                return card;
+            }
+
+
+            card.gameObject.name = "Necessary Card " + (necessaryIndex);
+            Debug.Log("oluþturuldu");
+            if (cardData == null) cardData = necessaryCardDatas[necessaryIndex];
+            card.cardID = currentIndex + 1;
+            card.SetCard(this, cardData);
+
+            if (card.gameObject != cards[0]) card.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
+            necessaryIndex++;
+            if (GameManager.Instance.gameDone) card.gameObject.SetActive(false);
             return card;
         }
-
         
-        card.gameObject.name = "Necessary Card " + (necessaryIndex);
-        if (cardData == null) cardData = necessaryCardDatas[necessaryIndex];
-        card.cardID = currentIndex + 1;
-        card.SetCard(this, cardData);
-        
-        if (card.gameObject != cards[0]) card.transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
-        necessaryIndex++;
-
-        return card;
         
     }
 
@@ -109,9 +129,6 @@ public class CardManager : Singleton<CardManager>
 
     public void ZoomNextCard(float distanceMoved)
     {
-        Debug.Log(cards.Count > 1);
-        Debug.Log(currentIndex <= tuple[tuple.Length - 1].y);
-        Debug.Log(Mathf.Abs(distanceMoved));
         if (cards.Count > 1 && currentIndex <= tuple[tuple.Length-1].y && Mathf.Abs(distanceMoved) > 0)
         {
             float step = Mathf.SmoothStep(0.8f, 1, Mathf.Abs(distanceMoved) / (Screen.width / 2));

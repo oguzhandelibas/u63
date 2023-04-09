@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9214c7cf160617b4fa92ec20ccf37e46, type: 3}
-  m_Name: ACADEMIC SUCCES LOSE CARD
+  m_Name: REQUIREMENT LOSE CARD
   m_EditorClassIdentifier: 
   forLeft: 0
   isRequired: 0
-  cardText: "Teknik olarak kendini geli\u015Ftirmedi\u011Fin i\xE7in akademiden at\u0131ld\u0131n
-    :'("
+  cardText: "Zorunlu g\xF6revi tamamlamad\u0131\u011F\u0131n i\xE7in. ATILDIN!"
   answers:
   - "Akademiye tekrar ba\u015Fla!"
   - "Akademiye tekrar ba\u015Fla!"
@@ -24,6 +23,6 @@ MonoBehaviour:
   experience: 0
   selfImprovment: 0
   dayCost: 0
-  characterName: "At\u0131l Samanc\u0131o\u011Flu"
-  characterImage: {fileID: 21300000, guid: 9a59d4a4e2e506c4fa0ef814dbafa6b2, type: 3}
+  characterName: Melike
+  characterImage: {fileID: 21300000, guid: f39eadbe816d1d64e8fac54f08cea659, type: 3}
   backgroundColor: {r: 0.9058824, g: 0.29803923, b: 0.23529413, a: 1}

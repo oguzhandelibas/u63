@@ -839,6 +839,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: db6ae26c97fff0c419b85c7f52cb50f7, type: 2}
   - {fileID: 11400000, guid: 3a5b272150b086c4595dad6771704913, type: 2}
   - {fileID: 11400000, guid: 62af65af951449640b9e06e9623701a0, type: 2}
+  - {fileID: 11400000, guid: 8d552fd012a798d4c869755e5b218bbe, type: 2}
+  finalCard: {fileID: 11400000, guid: a0b547d01b89fdb4391166b25fd212fc, type: 2}
+  dayText: {fileID: 1876944249}
 --- !u!114 &1435987210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1097,6 +1100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGameContinue: 0
+  gameDone: 0
 --- !u!1 &1729163300
 GameObject:
   m_ObjectHideFlags: 0

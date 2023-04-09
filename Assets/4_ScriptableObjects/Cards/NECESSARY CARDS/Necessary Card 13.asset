@@ -23,5 +23,6 @@ MonoBehaviour:
   experience: 0
   selfImprovment: 10
   dayCost: 30
+  characterName: "Melike Parlakk\u0131l\u0131\xE7"
   characterImage: {fileID: 21300000, guid: bdcb23bde4381d44ab33a8e6b4daac16, type: 3}
   backgroundColor: {r: 0.9725491, g: 0.7254902, b: 0.019607844, a: 1}

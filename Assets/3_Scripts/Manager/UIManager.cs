@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class UIManager : Singleton<UIManager>
 {
@@ -15,11 +16,24 @@ public class UIManager : Singleton<UIManager>
     public LoseType loseType;
 
     [SerializeField] private CardData[] loseCardDatas;
+    [SerializeField] private CardData finalCard;
+    [SerializeField] private TextMeshProUGUI dayText;
+
+    public void UpdateDay(int dayCount)
+    {
+        if (dayCount <= 0)
+        {
+            dayCount = 0;
+            Win();
+        }
+        dayText.text = "Akademide son " + dayCount + " gün!";
+    }
 
     public void Lose(LoseType _loseType)
     {
         GameManager.Instance.isGameContinue = false;
-        CardData loseCardData = loseCardData = loseCardDatas[0];
+        GameManager.Instance.gameDone = true;
+        CardData loseCardData = loseCardDatas[0];
 
         switch (_loseType)
         {
@@ -39,11 +53,12 @@ public class UIManager : Singleton<UIManager>
                 loseCardData = loseCardDatas[4];
                 break;
         }
-        CardManager.Instance.CreateCard(loseCardData);
+        CardManager.Instance.CreateCard(loseCardData, true);
     }
 
     public void Win()
     {
-        Debug.Log("Oyun Bitti");
+        GameManager.Instance.gameDone = true;
+        CardManager.Instance.CreateCard(finalCard, true);
     }
 }

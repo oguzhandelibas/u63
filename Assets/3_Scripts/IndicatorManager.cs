@@ -20,8 +20,8 @@ public class IndicatorManager : Singleton<IndicatorManager>
         experienceImage.fillAmount += (experience/100);
         selfImprovementImage.fillAmount += (selfImprovement/100);
 
-        if( academicImage.fillAmount==0) UIManager.Instance.Lose(UIManager.LoseType.Academic);
-        else if(networkImage.fillAmount == 0) UIManager.Instance.Lose(UIManager.LoseType.Network);
+        if ( academicImage.fillAmount == 0 ) UIManager.Instance.Lose(UIManager.LoseType.Academic);
+        else if(networkImage.fillAmount  == 0) UIManager.Instance.Lose(UIManager.LoseType.Network);
         else if (experienceImage.fillAmount == 0) UIManager.Instance.Lose(UIManager.LoseType.Experience);
         else if (selfImprovementImage.fillAmount == 0) UIManager.Instance.Lose(UIManager.LoseType.SelfImprovement);
     }
