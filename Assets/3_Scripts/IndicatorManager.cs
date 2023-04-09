@@ -27,12 +27,20 @@ public class IndicatorManager : Singleton<IndicatorManager>
         else if (selfImprovementImage.fillAmount == 0) UIManager.Instance.Lose(UIManager.LoseType.SelfImprovement);
     }
 
-    public void IndicatorCircleActiveness(bool academic, bool network, bool experience, bool selfImprovement)
+    public void IndicatorCircleActiveness(bool[] indicatorCircleActiveness = null)
     {
-        indicatorCircles[0].SetActive(academic);
-        indicatorCircles[1].SetActive(network);
-        indicatorCircles[2].SetActive(experience);
-        indicatorCircles[3].SetActive(selfImprovement);
+        if (indicatorCircleActiveness == null)
+        {
+            indicatorCircleActiveness = new bool[4];
+            indicatorCircleActiveness[0] = false;
+            indicatorCircleActiveness[1] = false;
+            indicatorCircleActiveness[2] = false;
+            indicatorCircleActiveness[3] = false;
+        }
+        indicatorCircles[0].SetActive(indicatorCircleActiveness[0]);
+        indicatorCircles[1].SetActive(indicatorCircleActiveness[1]);
+        indicatorCircles[2].SetActive(indicatorCircleActiveness[2]);
+        indicatorCircles[3].SetActive(indicatorCircleActiveness[3]);
     }
 
     public float FinalCalculation()

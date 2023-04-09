@@ -43,13 +43,13 @@ public class CardManager : Singleton<CardManager>
         for (int i = 0; i < indicators.Length; i++)
         {
             indicators[i].SetActive(true);
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
         }
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
         for (int i = indicators.Length-1; i >= 0; i--)
         {
             indicators[i].SetActive(false);
-            yield return new WaitForSeconds(1);
+            yield return new WaitForSeconds(0.5f);
         }
     }
 

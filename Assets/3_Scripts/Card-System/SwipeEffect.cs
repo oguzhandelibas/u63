@@ -27,20 +27,19 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
         {
             cardTransform.localEulerAngles = new Vector3(0, 0, Mathf.LerpAngle(0, -30, (_initialPosition.x + cardTransform.localPosition.x) / (Screen.width / 2)));
             card.SetSwipeObjectActiveness(false, true);
-            //IndicatorManager.Instance.IndicatorCircleActiveness()
-            
         }
         else
         {
             cardTransform.localEulerAngles = new Vector3(0, 0, Mathf.LerpAngle(0, 30, (_initialPosition.x - cardTransform.localPosition.x) / (Screen.width / 2)));
             card.SetSwipeObjectActiveness(true, false);
         }
+        IndicatorManager.Instance.IndicatorCircleActiveness(card.IndicatorCircleActivenessValue());
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
         card.SetSwipeObjectActiveness(false,false);
-        
+        IndicatorManager.Instance.IndicatorCircleActiveness();
 
         _distanceMoved = Mathf.Abs(cardTransform.localPosition.x - (_initialPosition.x));
         if(_distanceMoved< swipeDistance * Screen.width)
@@ -61,20 +60,13 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
                 _swipeLeft = true;
             }
             StartCoroutine(MovedCard());
-            
-            
         }
     }
 
     private IEnumerator MovedCard()
     {
         float time = 0;
-        if(card.cardManager.cards.Count > 1)
-        {
-            card.cardManager.cards[1].GetComponent<Card>().cardText.gameObject.SetActive(true);
-            card.cardManager.cards[1].transform.localScale = new Vector3(1, 1, 1);
-            card.cardText.gameObject.SetActive(false);
-        }
+        
         
         while (GetComponent<Image>().color != new Color(1, 1, 1, 0))
         {
@@ -94,8 +86,16 @@ public class SwipeEffect : MonoBehaviour,IDragHandler,IBeginDragHandler,IEndDrag
             yield return null;
         }
         if (GameManager.Instance.gameDone) GameManager.Instance.RestartGame();
-        card.RemoveCard();
-        card.Swipe(_swipeLeft);
-        Destroy(gameObject);
+        if (card.cardManager.cards.Count > 1)
+        {
+            card.cardManager.cards[1].GetComponent<Card>().cardText.gameObject.SetActive(true);
+            card.cardManager.cards[1].transform.localScale = new Vector3(1, 1, 1);
+            card.cardText.gameObject.SetActive(false);
+            card.RemoveCard();
+            card.Swipe(_swipeLeft);
+        }
+        
+        
+        Destroy(gameObject, 0.5f);
     }
 }

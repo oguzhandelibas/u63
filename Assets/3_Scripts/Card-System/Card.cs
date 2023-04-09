@@ -96,8 +96,15 @@ public class Card : MonoBehaviour
         answers[1].gameObject.SetActive(value2);
     }
 
-    public void IndicatorCircleActivenessValue()
+    public bool[] IndicatorCircleActivenessValue()
     {
+        bool[] indicatorValues = new bool[4];
 
+        indicatorValues[0] = (Mathf.Abs(cardData.academicSuccess) > 0);
+        indicatorValues[1] = (Mathf.Abs(cardData.network) > 0);
+        indicatorValues[2] = (Mathf.Abs(cardData.experience) > 0);
+        indicatorValues[3] = (Mathf.Abs(cardData.selfImprovment) > 0);
+
+        return indicatorValues;
     }
 }
