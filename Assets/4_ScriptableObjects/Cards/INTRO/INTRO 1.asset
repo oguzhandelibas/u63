@@ -25,5 +25,5 @@ MonoBehaviour:
   selfImprovment: 0
   dayCost: 0
   characterName: Ahmet Sever - 2D Artist
-  characterImage: {fileID: 21300000, guid: 2c72b0f84fc945a4c9a410b544cc7d9f, type: 3}
+  characterImage: {fileID: 21300000, guid: 5eb24462bb817c14892e3988d29464df, type: 3}
   backgroundColor: {r: 0.5058824, g: 0.5294118, b: 0.70980394, a: 1}

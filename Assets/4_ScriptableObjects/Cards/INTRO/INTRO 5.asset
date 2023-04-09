@@ -25,6 +25,6 @@ MonoBehaviour:
   experience: 0
   selfImprovment: 0
   dayCost: 0
-  characterName: "\u015Eeyma Ertu\u011Frul - Game Developer"
-  characterImage: {fileID: 21300000, guid: 8a0c91478976f2a40b19571ddc2eb4f3, type: 3}
+  characterName: "Seyma Ertu\u011Frul - Game Developer"
+  characterImage: {fileID: 21300000, guid: b2052b34206a4d5439dcb8a9aa039bd3, type: 3}
   backgroundColor: {r: 0.5058824, g: 0.5294118, b: 0.70980394, a: 1}
